@@ -137,6 +137,7 @@ const steps = [
 ];
 //
 //
+//
 const benefits = [
   { title: "Live interactive online lessons", icon: MonitorPlay },
   { title: "Small group or individual options", icon: Users },
