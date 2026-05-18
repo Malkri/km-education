@@ -1,0 +1,24 @@
+<svg width="360" height="180" viewBox="0 0 360 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">KM Education logo</title>
+  <desc id="desc">A pistachio green KM script wordmark above the word Education.</desc>
+  <text
+    x="180"
+    y="104"
+    text-anchor="middle"
+    fill="#93C45A"
+    font-family="Snell Roundhand, Brush Script MT, Apple Chancery, cursive"
+    font-size="116"
+    font-weight="600"
+    letter-spacing="-9"
+  >Km</text>
+  <text
+    x="180"
+    y="148"
+    text-anchor="middle"
+    fill="#93C45A"
+    font-family="Avenir Next, Avenir, Nunito Sans, Segoe UI, Arial, sans-serif"
+    font-size="29"
+    font-weight="800"
+    letter-spacing="5"
+  >EDUCATION</text>
+</svg>

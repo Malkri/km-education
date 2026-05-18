@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbf8ef;
-  --foreground: #173529;
-  --mint: #c8f5d3;
+  --background: #fcfbf4;
+  --foreground: #24382f;
+  --mint: #dcefb7;
+  --pistachio: #93c45a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-mint: var(--mint);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-pistachio: var(--pistachio);
+  --color-emerald-50: #f7fbef;
+  --color-emerald-100: #edf7dc;
+  --color-emerald-200: #dcefb7;
+  --color-emerald-300: #c5e58f;
+  --color-emerald-400: #a9d66a;
+  --color-emerald-500: #93c45a;
+  --color-emerald-600: #78a943;
+  --color-emerald-700: #5f8736;
+  --color-emerald-800: #48672d;
+  --color-emerald-900: #354f29;
+  --color-emerald-950: #20351f;
+  --font-sans: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", Arial,
+    Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono",
+    monospace;
 }
 
 * {
@@ -26,13 +41,14 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", Arial,
+    Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #c8f5d3;
-  color: #10291f;
+  background: #dcefb7;
+  color: #203325;
 }
 
 summary::-webkit-details-marker {
@@ -48,5 +64,5 @@ select {
 }
 
 input::placeholder {
-  color: #88938d;
+  color: #8a957f;
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
@@ -288,9 +289,9 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold text-[#274238]">{label}</span>
+      <span className="text-sm font-semibold text-[#33483d]">{label}</span>
       <input
-        className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fbf8ef] px-4 text-sm text-[#173529] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100"
+        className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fcfbf4] px-4 text-sm text-[#24382f] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100"
         placeholder={placeholder}
         type={type}
       />
@@ -307,8 +308,8 @@ function SelectField({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold text-[#274238]">{label}</span>
-      <select className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fbf8ef] px-4 text-sm text-[#173529] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100">
+      <span className="text-sm font-semibold text-[#33483d]">{label}</span>
+      <select className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fcfbf4] px-4 text-sm text-[#24382f] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100">
         {children}
       </select>
     </label>
@@ -319,32 +320,32 @@ export default function Home() {
   return (
     <main
       id="home"
-      className="min-h-screen overflow-hidden bg-[#fbf8ef] text-[#173529]"
+      className="min-h-screen overflow-hidden bg-[#fcfbf4] text-[#24382f]"
     >
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-emerald-950/10 bg-[#fbf8ef]/88 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-emerald-950/10 bg-[#fcfbf4]/88 backdrop-blur-xl">
         <nav
           aria-label="Main navigation"
           className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8"
         >
-          <a href="#home" className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#123d2d] text-sm font-bold tracking-wide text-mint shadow-lg shadow-emerald-950/20">
-              KM
-            </span>
-            <span className="leading-tight">
-              <span className="block text-base font-bold tracking-tight text-[#173529]">
-                KM Education
-              </span>
-              <span className="block text-xs font-medium text-[#6a776f]">
-                Learn with confidence
-              </span>
-            </span>
+          <a
+            href="#home"
+            className="flex h-14 w-[9.5rem] items-center justify-start transition hover:-translate-y-0.5 sm:w-[10.75rem]"
+          >
+            <Image
+              src="/km-education-logo.svg"
+              alt="KM Education"
+              width={180}
+              height={90}
+              className="h-12 w-full object-contain"
+              priority
+            />
           </a>
 
           <div className="hidden items-center gap-7 lg:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                className="text-sm font-semibold text-[#48574f] transition hover:text-emerald-800"
+                className="text-sm font-semibold text-[#536250] transition hover:text-emerald-800"
                 href={link.href}
               >
                 {link.label}
@@ -354,7 +355,7 @@ export default function Home() {
 
           <div className="hidden lg:block">
             <a
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#123d2d] px-5 text-sm font-bold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#0f3326]"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 text-sm font-bold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={18} />
@@ -363,7 +364,7 @@ export default function Home() {
           </div>
 
           <details className="group relative lg:hidden">
-            <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-emerald-900/10 bg-white text-[#173529] shadow-sm">
+            <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-emerald-900/10 bg-white text-[#24382f] shadow-sm">
               <Menu
                 aria-hidden="true"
                 className="block group-open:hidden"
@@ -381,7 +382,7 @@ export default function Home() {
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
-                    className="rounded-2xl px-4 py-3 text-sm font-semibold text-[#48574f] transition hover:bg-emerald-50 hover:text-emerald-800"
+                    className="rounded-2xl px-4 py-3 text-sm font-semibold text-[#536250] transition hover:bg-emerald-50 hover:text-emerald-800"
                     href={link.href}
                   >
                     {link.label}
@@ -389,7 +390,7 @@ export default function Home() {
                 ))}
               </div>
               <a
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#123d2d] px-5 py-3 text-sm font-bold text-white"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 py-3 text-sm font-bold text-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -401,39 +402,39 @@ export default function Home() {
       </header>
 
       <section className="relative isolate overflow-hidden pt-28 sm:pt-32">
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#fbf8ef_0%,#eef8ea_48%,#dff4df_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#fcfbf4_0%,#f2f8e8_48%,#eaf5d5_100%)]" />
         <div className="absolute left-0 top-32 -z-10 h-60 w-2/3 rotate-[-8deg] bg-emerald-200/25 blur-3xl" />
-        <div className="absolute bottom-0 right-0 -z-10 h-80 w-2/3 rotate-[9deg] bg-[#c4f0d0]/45 blur-3xl" />
+        <div className="absolute bottom-0 right-0 -z-10 h-80 w-2/3 rotate-[9deg] bg-[#dcefb7]/45 blur-3xl" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:pb-24 lg:pt-16">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-white/70 px-4 py-2 text-sm font-bold text-emerald-900 shadow-sm shadow-emerald-950/5">
               <Star
                 aria-hidden="true"
-                className="fill-[#d8a43a] text-[#d8a43a]"
+                className="fill-[#b89534] text-[#b89534]"
                 size={16}
               />
               Online classes that help students learn with confidence.
             </p>
-            <h1 className="mt-7 max-w-4xl text-5xl font-bold leading-[1.02] tracking-tight text-[#10291f] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-7 max-w-4xl text-5xl font-bold leading-[1.02] tracking-tight text-[#203325] sm:text-6xl lg:text-7xl">
               Online Classes That Help Students Learn Smarter, Stay Consistent,
               and Feel Confident
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#55635b] sm:text-xl">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#66725f] sm:text-xl">
               Live, structured online lessons with expert teachers, clear study
               plans, progress support, and flexible class options for busy
               students.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#123d2d] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#0f3326]"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={20} />
                 Book a Free Trial Class
               </a>
               <a
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-emerald-900/15 bg-white/75 px-7 text-base font-bold text-[#173529] shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700/30 hover:bg-white"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-emerald-900/15 bg-white/75 px-7 text-base font-bold text-[#24382f] shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700/30 hover:bg-white"
                 href="#classes"
               >
                 View Classes
@@ -450,7 +451,7 @@ export default function Home() {
                     className="rounded-3xl border border-white/70 bg-white/65 p-4 shadow-lg shadow-emerald-950/5 backdrop-blur"
                   >
                     <Icon className="text-emerald-700" size={20} />
-                    <p className="mt-3 text-sm font-semibold leading-5 text-[#274238]">
+                    <p className="mt-3 text-sm font-semibold leading-5 text-[#33483d]">
                       {benefit.label}
                     </p>
                   </div>
@@ -462,11 +463,11 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -left-6 top-10 hidden h-32 w-32 rotate-12 rounded-[2.5rem] border border-emerald-300/50 bg-white/35 backdrop-blur md:block" />
             <div className="absolute -right-4 bottom-20 hidden h-28 w-44 -rotate-6 rounded-[2rem] border border-mint/70 bg-mint/25 backdrop-blur md:block" />
-            <div className="relative rounded-[2.5rem] border border-white/70 bg-white/55 p-3 shadow-[0_34px_90px_-38px_rgba(12,68,42,0.6)] backdrop-blur">
-              <div className="overflow-hidden rounded-[2rem] bg-[#123d2d]">
+            <div className="relative rounded-[2.5rem] border border-white/70 bg-white/55 p-3 shadow-[0_34px_90px_-38px_rgba(61,91,43,0.6)] backdrop-blur">
+              <div className="overflow-hidden rounded-[2rem] bg-[#3f642c]">
                 <div className="flex items-center justify-between border-b border-white/10 bg-white/8 px-5 py-4 text-white">
                   <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-[#ffbe7a]" />
+                    <span className="h-3 w-3 rounded-full bg-[#edc77b]" />
                     <span className="h-3 w-3 rounded-full bg-mint" />
                     <span className="h-3 w-3 rounded-full bg-emerald-400" />
                   </div>
@@ -475,9 +476,9 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="grid gap-4 p-4 sm:grid-cols-[1.4fr_0.8fr]">
-                  <div className="relative min-h-[22rem] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_20%_20%,rgba(193,245,207,0.35),transparent_32%),linear-gradient(135deg,#19553e,#0f2c22)] p-5 text-white">
+                  <div className="relative min-h-[22rem] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_20%_20%,rgba(220,239,183,0.42),transparent_32%),linear-gradient(135deg,#72994a,#304b2e)] p-5 text-white">
                     <div className="absolute inset-x-8 top-8 h-24 rotate-[-3deg] rounded-[2rem] border border-white/10 bg-white/10" />
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0e251d] to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#263f2a] to-transparent" />
                     <div className="relative flex h-full min-h-[19rem] flex-col justify-between">
                       <div className="max-w-64 rounded-3xl border border-white/15 bg-white/12 p-4 backdrop-blur">
                         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint">
@@ -516,9 +517,9 @@ export default function Home() {
                   </div>
 
                   <div className="grid gap-4">
-                    <div className="rounded-[1.5rem] bg-[#e7f8e8] p-5">
+                    <div className="rounded-[1.5rem] bg-[#f0f7df] p-5">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-sm font-bold text-[#173529]">
+                        <p className="text-sm font-bold text-[#24382f]">
                           Weekly progress
                         </p>
                         <BarChart3 className="text-emerald-700" size={20} />
@@ -527,7 +528,7 @@ export default function Home() {
                         {["Concept clarity", "Practice", "Confidence"].map(
                           (label, index) => (
                             <div key={label}>
-                              <div className="mb-2 flex items-center justify-between text-xs font-semibold text-[#55635b]">
+                              <div className="mb-2 flex items-center justify-between text-xs font-semibold text-[#66725f]">
                                 <span>{label}</span>
                                 <span>{78 + index * 6}%</span>
                               </div>
@@ -556,7 +557,7 @@ export default function Home() {
                         <div className="grid h-10 w-10 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
                           <Check size={20} />
                         </div>
-                        <p className="text-sm font-bold text-[#173529]">
+                        <p className="text-sm font-bold text-[#24382f]">
                           Practice uploaded
                         </p>
                       </div>
@@ -577,7 +578,7 @@ export default function Home() {
             return (
               <div
                 key={item.label}
-                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-bold text-[#274238]"
+                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-bold text-[#33483d]"
               >
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800">
                   <Icon aria-hidden="true" size={19} />
@@ -593,18 +594,18 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Structure over pressure</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               Most students don&apos;t need more pressure — they need the right
               structure.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[2rem] border border-[#e6d7bd] bg-[#fffaf0] p-7 shadow-sm">
+            <div className="rounded-[2rem] border border-[#e6d7bd] bg-[#fffdf4] p-7 shadow-sm">
               <div className="flex items-center gap-3">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#f4e3c1] text-[#76541d]">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#f2e8c9] text-[#6f5b24]">
                   <Target aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-bold text-[#173529]">
+                <h3 className="text-2xl font-bold text-[#24382f]">
                   Common problems
                 </h3>
               </div>
@@ -612,15 +613,15 @@ export default function Home() {
                 {problems.map((problem) => (
                   <div
                     key={problem}
-                    className="flex items-start gap-3 rounded-2xl bg-white px-4 py-4 text-[#55635b]"
+                    className="flex items-start gap-3 rounded-2xl bg-white px-4 py-4 text-[#66725f]"
                   >
-                    <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d8a43a]" />
+                    <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#b89534]" />
                     <span className="font-medium">{problem}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-emerald-900/10 bg-[#123d2d] p-7 text-white shadow-2xl shadow-emerald-950/20">
+            <div className="rounded-[2rem] border border-emerald-900/10 bg-[#3f642c] p-7 text-white shadow-2xl shadow-emerald-950/20">
               <div className="flex items-center gap-3">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/12 text-mint">
                   <HeartHandshake aria-hidden="true" size={22} />
@@ -651,13 +652,13 @@ export default function Home() {
 
       <section
         id="classes"
-        className="bg-[#eff8ec] px-5 py-20 sm:px-8 lg:py-28"
+        className="bg-[#f4faeb] px-5 py-20 sm:px-8 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <SectionEyebrow>Classes and programs</SectionEyebrow>
-              <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
                 Choose the right online class for your goals
               </h2>
             </div>
@@ -677,7 +678,7 @@ export default function Home() {
               return (
                 <article
                   key={program.title}
-                  className="group flex min-h-[28rem] flex-col rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_26px_70px_-46px_rgba(12,68,42,0.45)] transition hover:-translate-y-1 hover:shadow-[0_34px_80px_-46px_rgba(12,68,42,0.6)]"
+                  className="group flex min-h-[28rem] flex-col rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_26px_70px_-46px_rgba(61,91,43,0.45)] transition hover:-translate-y-1 hover:shadow-[0_34px_80px_-46px_rgba(61,91,43,0.6)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <IconBadge icon={Icon} />
@@ -685,10 +686,10 @@ export default function Home() {
                       {program.badge}
                     </span>
                   </div>
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#173529]">
+                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#24382f]">
                     {program.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#5b675f]">
+                  <p className="mt-3 text-sm leading-6 text-[#66725f]">
                     {program.description}
                   </p>
                   <div className="mt-6 space-y-4 border-t border-emerald-900/10 pt-5">
@@ -696,7 +697,7 @@ export default function Home() {
                       <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">
                         Ideal for
                       </p>
-                      <p className="mt-2 text-sm leading-6 text-[#48574f]">
+                      <p className="mt-2 text-sm leading-6 text-[#536250]">
                         {program.ideal}
                       </p>
                     </div>
@@ -704,14 +705,14 @@ export default function Home() {
                       <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">
                         What&apos;s included
                       </p>
-                      <p className="mt-2 text-sm leading-6 text-[#48574f]">
+                      <p className="mt-2 text-sm leading-6 text-[#536250]">
                         {program.included}
                       </p>
                     </div>
                   </div>
                   <div className="mt-auto pt-7">
                     <a
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f5fbf3] px-5 py-3 text-sm font-bold text-[#173529] transition group-hover:border-emerald-700/25 group-hover:bg-[#123d2d] group-hover:text-white"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f8fbef] px-5 py-3 text-sm font-bold text-[#24382f] transition group-hover:border-emerald-700/25 group-hover:bg-[#3f642c] group-hover:text-white"
                       href="#booking"
                     >
                       Book Trial
@@ -729,7 +730,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <SectionEyebrow>Simple start</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               Start learning in 3 simple steps
             </h2>
           </div>
@@ -741,18 +742,18 @@ export default function Home() {
               return (
                 <div
                   key={step.title}
-                  className="relative rounded-[2rem] border border-emerald-900/10 bg-white p-7 text-center shadow-[0_24px_70px_-46px_rgba(12,68,42,0.45)]"
+                  className="relative rounded-[2rem] border border-emerald-900/10 bg-white p-7 text-center shadow-[0_24px_70px_-46px_rgba(61,91,43,0.45)]"
                 >
-                  <div className="mx-auto grid h-16 w-16 place-items-center rounded-3xl bg-[#123d2d] text-white shadow-xl shadow-emerald-950/20">
+                  <div className="mx-auto grid h-16 w-16 place-items-center rounded-3xl bg-[#3f642c] text-white shadow-xl shadow-emerald-950/20">
                     <Icon aria-hidden="true" size={26} />
                   </div>
                   <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-bold uppercase tracking-[0.16em] text-emerald-800">
                     Step {index + 1}
                   </span>
-                  <h3 className="mt-4 text-2xl font-bold text-[#173529]">
+                  <h3 className="mt-4 text-2xl font-bold text-[#24382f]">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#5b675f]">
+                  <p className="mt-3 text-sm leading-6 text-[#66725f]">
                     {step.description}
                   </p>
                 </div>
@@ -761,7 +762,7 @@ export default function Home() {
           </div>
           <div className="mt-10 text-center">
             <a
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#123d2d] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#0f3326]"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={20} />
@@ -771,7 +772,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#123d2d] px-5 py-20 text-white sm:px-8 lg:py-28">
+      <section className="bg-[#3f642c] px-5 py-20 text-white sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-mint">
@@ -807,14 +808,14 @@ export default function Home() {
 
       <section id="results" className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[2.5rem] border border-emerald-900/10 bg-white shadow-[0_34px_90px_-52px_rgba(12,68,42,0.55)]">
+          <div className="overflow-hidden rounded-[2.5rem] border border-emerald-900/10 bg-white shadow-[0_34px_90px_-52px_rgba(61,91,43,0.55)]">
             <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="bg-[#eff8ec] p-8 sm:p-10 lg:p-12">
+              <div className="bg-[#f4faeb] p-8 sm:p-10 lg:p-12">
                 <SectionEyebrow>Results and impact</SectionEyebrow>
-                <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+                <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
                   Credible progress starts with consistent support
                 </h2>
-                <p className="mt-5 text-base leading-7 text-[#5b675f]">
+                <p className="mt-5 text-base leading-7 text-[#66725f]">
                   These statistic blocks are ready for verified outcomes,
                   confidence surveys, class counts, and student feedback.
                 </p>
@@ -825,10 +826,10 @@ export default function Home() {
               <div className="grid gap-px bg-emerald-900/10 sm:grid-cols-2">
                 {stats.map((stat) => (
                   <div key={stat.label} className="bg-white p-8 sm:p-10">
-                    <p className="text-5xl font-bold tracking-tight text-[#123d2d]">
+                    <p className="text-5xl font-bold tracking-tight text-[#3f642c]">
                       {stat.value}
                     </p>
-                    <p className="mt-3 text-base font-semibold text-[#55635b]">
+                    <p className="mt-3 text-base font-semibold text-[#66725f]">
                       {stat.label}
                     </p>
                   </div>
@@ -841,12 +842,12 @@ export default function Home() {
 
       <section
         id="testimonials"
-        className="bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28"
+        className="bg-[#fffdf4] px-5 py-20 sm:px-8 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Student and parent voices</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               Hear from our students and parents
             </h2>
           </div>
@@ -854,9 +855,9 @@ export default function Home() {
             {videoTestimonials.map((testimonial) => (
               <article
                 key={`${testimonial.name}-${testimonial.role}`}
-                className="overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white shadow-[0_26px_70px_-48px_rgba(12,68,42,0.45)]"
+                className="overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white shadow-[0_26px_70px_-48px_rgba(61,91,43,0.45)]"
               >
-                <div className="relative aspect-video bg-[linear-gradient(135deg,#123d2d,#2f8f61_58%,#c9f3d1)]">
+                <div className="relative aspect-video bg-[linear-gradient(135deg,#3f642c,#93c45a_58%,#eef8da)]">
                   <div className="absolute inset-4 rounded-[1.4rem] border border-white/20 bg-white/10" />
                   <button
                     aria-label={`Play testimonial from ${testimonial.name}`}
@@ -870,13 +871,13 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#173529]">
+                  <h3 className="text-xl font-bold text-[#24382f]">
                     {testimonial.name}
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-emerald-700">
                     {testimonial.role}
                   </p>
-                  <p className="mt-4 text-sm leading-6 text-[#5b675f]">
+                  <p className="mt-4 text-sm leading-6 text-[#66725f]">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                 </div>
@@ -889,7 +890,7 @@ export default function Home() {
                 key={testimonial.name}
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-7 shadow-sm"
               >
-                <div className="flex gap-1 text-[#d8a43a]">
+                <div className="flex gap-1 text-[#b89534]">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star
                       key={star}
@@ -899,7 +900,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <p className="mt-5 text-lg leading-8 text-[#274238]">
+                <p className="mt-5 text-lg leading-8 text-[#33483d]">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <p className="mt-5 text-sm font-bold text-emerald-800">
@@ -915,7 +916,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Learning experience</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               See what learning with us looks like
             </h2>
           </div>
@@ -926,7 +927,7 @@ export default function Home() {
               return (
                 <div
                   key={item.title}
-                  className={`relative overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-[linear-gradient(135deg,#f5fbf3,#dff4df)] p-6 shadow-sm ${item.className}`}
+                  className={`relative overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-[linear-gradient(135deg,#f8fbef,#eaf5d5)] p-6 shadow-sm ${item.className}`}
                 >
                   <div className="absolute -right-10 -top-10 h-36 w-36 rotate-12 rounded-[2rem] bg-white/45" />
                   <div className="relative flex h-full flex-col justify-between">
@@ -934,10 +935,10 @@ export default function Home() {
                       <Icon aria-hidden="true" size={25} />
                     </span>
                     <div>
-                      <h3 className="text-2xl font-bold text-[#173529]">
+                      <h3 className="text-2xl font-bold text-[#24382f]">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm font-semibold text-[#5b675f]">
+                      <p className="mt-2 text-sm font-semibold text-[#66725f]">
                         {item.description}
                       </p>
                     </div>
@@ -949,14 +950,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#eff8ec] px-5 py-20 sm:px-8 lg:py-28">
+      <section className="bg-[#f4faeb] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <SectionEyebrow>Teacher support</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               Supportive teachers. Structured lessons. Real progress.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-[#55635b]">
+            <p className="mt-6 text-lg leading-8 text-[#66725f]">
               Our classes are designed to make difficult topics easier to
               understand through clear explanations, guided practice, and
               regular feedback.
@@ -966,20 +967,20 @@ export default function Home() {
             {teachers.map((teacher, index) => (
               <article
                 key={`${teacher.name}-${teacher.specialty}`}
-                className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(12,68,42,0.45)]"
+                className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
-                <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#123d2d,#2f8f61)] text-white">
+                <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
                   <span className="text-4xl font-bold">
                     T{index + 1}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-[#173529]">
+                <h3 className="mt-5 text-xl font-bold text-[#24382f]">
                   {teacher.name}
                 </h3>
                 <p className="mt-1 text-sm font-bold text-emerald-700">
                   {teacher.specialty}
                 </p>
-                <p className="mt-4 text-sm leading-6 text-[#5b675f]">
+                <p className="mt-4 text-sm leading-6 text-[#66725f]">
                   {teacher.bio}
                 </p>
               </article>
@@ -990,7 +991,7 @@ export default function Home() {
 
       <section id="booking" className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 overflow-hidden rounded-[2.5rem] bg-[#123d2d] p-5 text-white shadow-[0_34px_90px_-46px_rgba(12,68,42,0.65)] lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
+          <div className="grid gap-8 overflow-hidden rounded-[2.5rem] bg-[#3f642c] p-5 text-white shadow-[0_34px_90px_-46px_rgba(61,91,43,0.65)] lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
             <div className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-white/8 p-8">
               <div>
                 <p className="inline-flex items-center gap-2 rounded-full bg-mint/15 px-4 py-2 text-sm font-bold text-mint">
@@ -1023,11 +1024,11 @@ export default function Home() {
               </div>
             </div>
 
-            <form className="rounded-[2rem] bg-white p-6 text-[#173529] sm:p-8">
+            <form className="rounded-[2rem] bg-white p-6 text-[#24382f] sm:p-8">
               <div className="flex flex-col justify-between gap-4 border-b border-emerald-900/10 pb-6 sm:flex-row sm:items-center">
                 <div>
                   <h3 className="text-2xl font-bold">Book a Free Trial Class</h3>
-                  <p className="mt-2 text-sm leading-6 text-[#5b675f]">
+                  <p className="mt-2 text-sm leading-6 text-[#66725f]">
                     Tell us what you&apos;re looking for and we&apos;ll help
                     choose the best starting point.
                   </p>
@@ -1063,24 +1064,24 @@ export default function Home() {
                   <option>One-on-One Online Coaching</option>
                 </SelectField>
                 <label className="block sm:col-span-2">
-                  <span className="text-sm font-semibold text-[#274238]">
+                  <span className="text-sm font-semibold text-[#33483d]">
                     Preferred time
                   </span>
                   <input
-                    className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fbf8ef] px-4 text-sm text-[#173529] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100"
+                    className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fcfbf4] px-4 text-sm text-[#24382f] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100"
                     placeholder="e.g. Weekdays after 5 PM"
                     type="text"
                   />
                 </label>
               </div>
               <button
-                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#123d2d] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#0f3326]"
+                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
                 type="button"
               >
                 <CalendarCheck aria-hidden="true" size={20} />
                 Request My Free Trial
               </button>
-              <p className="mt-4 text-center text-xs font-medium text-[#6a776f]">
+              <p className="mt-4 text-center text-xs font-medium text-[#73806f]">
                 Form submission will be connected in the next functionality
                 pass.
               </p>
@@ -1089,14 +1090,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="bg-[#eff8ec] px-5 py-20 sm:px-8 lg:py-28">
+      <section id="faq" className="bg-[#f4faeb] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <SectionEyebrow>FAQ</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#10291f] sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
               Questions before your first class?
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5b675f]">
+            <p className="mt-5 text-base leading-7 text-[#66725f]">
               A clear starting point helps students and parents feel confident
               before joining.
             </p>
@@ -1107,7 +1108,7 @@ export default function Home() {
                 key={faq.question}
                 className="group rounded-[1.5rem] border border-emerald-900/10 bg-white p-5 shadow-sm"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-bold text-[#173529]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-bold text-[#24382f]">
                   {faq.question}
                   <ChevronDown
                     aria-hidden="true"
@@ -1115,7 +1116,7 @@ export default function Home() {
                     size={22}
                   />
                 </summary>
-                <p className="mt-4 text-sm leading-7 text-[#5b675f]">
+                <p className="mt-4 text-sm leading-7 text-[#66725f]">
                   {faq.answer}
                 </p>
               </details>
@@ -1124,20 +1125,21 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#10291f] px-5 py-12 text-white sm:px-8">
+      <footer className="bg-[#203325] px-5 py-12 text-white sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr]">
             <div>
-              <a href="#home" className="flex items-center gap-3">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint text-sm font-bold tracking-wide text-[#123d2d]">
-                  KM
-                </span>
-                <span>
-                  <span className="block text-lg font-bold">KM Education</span>
-                  <span className="block text-sm text-white/60">
-                    Online classes that help students learn with confidence.
-                  </span>
-                </span>
+              <a
+                href="#home"
+                className="flex w-[11rem] items-center"
+              >
+                <Image
+                  src="/km-education-logo.svg"
+                  alt="KM Education"
+                  width={180}
+                  height={90}
+                  className="h-14 w-full object-contain"
+                />
               </a>
               <p className="mt-5 max-w-sm text-sm leading-7 text-white/62">
                 Premium, supportive online learning for students who want
@@ -1184,7 +1186,7 @@ export default function Home() {
                 Start here
               </h3>
               <a
-                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-bold text-[#123d2d] transition hover:-translate-y-0.5 hover:bg-white"
+                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-bold text-[#3f642c] transition hover:-translate-y-0.5 hover:bg-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -1195,7 +1197,7 @@ export default function Home() {
                   <a
                     key={social}
                     aria-label={`${social} social profile placeholder`}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-bold text-white/70 transition hover:bg-white hover:text-[#123d2d]"
+                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-bold text-white/70 transition hover:bg-white hover:text-[#3f642c]"
                     href="#home"
                   >
                     {social}
