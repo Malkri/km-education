@@ -77,7 +77,8 @@ const programs = [
     description:
       "Guided weekly lessons that help students stay aligned with schoolwork and build stronger study habits.",
     ideal: "Students who want steady support throughout the term.",
-    included: "Live lessons, recap notes, practice tasks, and progress check-ins.",
+    included:
+      "Live lessons, recap notes, practice tasks, and progress check-ins.",
     badge: "Weekly support",
     icon: BookOpenCheck,
   },
@@ -86,7 +87,8 @@ const programs = [
     description:
       "Focused preparation for assessments, topic tests, and exam periods with clear revision plans.",
     ideal: "Students preparing for upcoming tests or major exams.",
-    included: "Revision structure, worked examples, timed practice, and feedback.",
+    included:
+      "Revision structure, worked examples, timed practice, and feedback.",
     badge: "Test ready",
     icon: Target,
   },
@@ -94,8 +96,10 @@ const programs = [
     title: "Skill-Building Classes",
     description:
       "Confidence-building sessions for core skills, study routines, problem solving, and clearer thinking.",
-    ideal: "Students who want stronger foundations and better learning strategies.",
-    included: "Skill workshops, guided practice, resources, and teacher support.",
+    ideal:
+      "Students who want stronger foundations and better learning strategies.",
+    included:
+      "Skill workshops, guided practice, resources, and teacher support.",
     badge: "Stronger skills",
     icon: Lightbulb,
   },
@@ -104,7 +108,8 @@ const programs = [
     description:
       "Personalised online coaching for students who need targeted help, accountability, or extension.",
     ideal: "Students who benefit from individual attention and flexible goals.",
-    included: "Custom plan, private sessions, feedback, and parent-friendly updates.",
+    included:
+      "Custom plan, private sessions, feedback, and parent-friendly updates.",
     badge: "Personalised",
     icon: Users,
   },
@@ -130,6 +135,7 @@ const steps = [
     icon: MonitorPlay,
   },
 ];
+//
 
 const benefits = [
   { title: "Live interactive online lessons", icon: MonitorPlay },
@@ -156,7 +162,8 @@ const videoTestimonials = [
   {
     name: "Parent name",
     role: "Parent testimonial",
-    quote: "The structure made it much easier to understand what my child was working on.",
+    quote:
+      "The structure made it much easier to understand what my child was working on.",
   },
   {
     name: "Student name",
@@ -970,9 +977,7 @@ export default function Home() {
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
                 <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
-                  <span className="text-4xl font-bold">
-                    T{index + 1}
-                  </span>
+                  <span className="text-4xl font-bold">T{index + 1}</span>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-[#24382f]">
                   {teacher.name}
@@ -1027,7 +1032,9 @@ export default function Home() {
             <form className="rounded-[2rem] bg-white p-6 text-[#24382f] sm:p-8">
               <div className="flex flex-col justify-between gap-4 border-b border-emerald-900/10 pb-6 sm:flex-row sm:items-center">
                 <div>
-                  <h3 className="text-2xl font-bold">Book a Free Trial Class</h3>
+                  <h3 className="text-2xl font-bold">
+                    Book a Free Trial Class
+                  </h3>
                   <p className="mt-2 text-sm leading-6 text-[#66725f]">
                     Tell us what you&apos;re looking for and we&apos;ll help
                     choose the best starting point.
@@ -1129,10 +1136,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr]">
             <div>
-              <a
-                href="#home"
-                className="flex w-[11rem] items-center"
-              >
+              <a href="#home" className="flex w-[11rem] items-center">
                 <Image
                   src="/km-education-logo.svg"
                   alt="KM Education"
