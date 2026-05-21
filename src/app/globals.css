@@ -1,10 +1,62 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-SemiBold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Reenie Beanie";
+  src: url("/fonts/ReenieBeanie-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
 :root {
   --background: #fcfbf4;
   --foreground: #24382f;
   --mint: #dcefb7;
   --pistachio: #93c45a;
+  --font-body: "Instrument Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-display-stack: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --font-script-stack: "Reenie Beanie", "Comic Sans MS", cursive;
 }
 
 @theme inline {
@@ -23,8 +75,9 @@
   --color-emerald-800: #48672d;
   --color-emerald-900: #354f29;
   --color-emerald-950: #20351f;
-  --font-sans: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", Arial,
-    Helvetica, sans-serif;
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display-stack);
+  --font-script: var(--font-script-stack);
   --font-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono",
     monospace;
 }
@@ -41,8 +94,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", Arial,
-    Helvetica, sans-serif;
+  font-family: var(--font-body);
   text-rendering: optimizeLegibility;
 }
 

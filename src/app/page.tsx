@@ -416,13 +416,16 @@ export default function Home() {
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:pb-24 lg:pt-16">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-white/70 px-4 py-2 text-sm font-bold text-emerald-900 shadow-sm shadow-emerald-950/5">
+            <p className="inline-flex flex-wrap items-center gap-2 rounded-full border border-emerald-700/15 bg-white/70 px-4 py-2 text-sm font-bold text-emerald-900 shadow-sm shadow-emerald-950/5">
               <Star
                 aria-hidden="true"
                 className="fill-[#b89534] text-[#b89534]"
                 size={16}
               />
-              Online classes that help students learn with confidence.
+              <span className="font-script text-2xl font-normal leading-none text-emerald-800">
+                KM Education
+              </span>
+              <span>Online classes that help students learn with confidence.</span>
             </p>
             <h1 className="mt-7 max-w-4xl text-5xl font-bold leading-[1.02] tracking-tight text-[#203325] sm:text-6xl lg:text-7xl">
               Online Classes That Help Students Learn Smarter, Stay Consistent,
@@ -834,7 +837,7 @@ export default function Home() {
               <div className="grid gap-px bg-emerald-900/10 sm:grid-cols-2">
                 {stats.map((stat) => (
                   <div key={stat.label} className="bg-white p-8 sm:p-10">
-                    <p className="text-5xl font-bold tracking-tight text-[#3f642c]">
+                    <p className="font-display text-6xl font-bold leading-none tracking-normal text-[#3f642c]">
                       {stat.value}
                     </p>
                     <p className="mt-3 text-base font-semibold text-[#66725f]">
@@ -978,7 +981,9 @@ export default function Home() {
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
                 <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
-                  <span className="text-4xl font-bold">T{index + 1}</span>
+                  <span className="font-display text-5xl font-bold tracking-normal">
+                    T{index + 1}
+                  </span>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-[#24382f]">
                   {teacher.name}
