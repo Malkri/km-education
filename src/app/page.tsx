@@ -363,7 +363,7 @@ export default function Home() {
 
           <div className="hidden lg:block">
             <a
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 text-sm font-bold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 text-sm font-semibold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={18} />
@@ -398,7 +398,7 @@ export default function Home() {
                 ))}
               </div>
               <a
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 py-3 text-sm font-bold text-white"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 py-3 text-sm font-semibold text-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -409,60 +409,95 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="relative isolate overflow-hidden pt-28 sm:pt-32">
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#fcfbf4_0%,#f2f8e8_48%,#eaf5d5_100%)]" />
-        <div className="absolute left-0 top-32 -z-10 h-60 w-2/3 rotate-[-8deg] bg-emerald-200/25 blur-3xl" />
-        <div className="absolute bottom-0 right-0 -z-10 h-80 w-2/3 rotate-[9deg] bg-[#dcefb7]/45 blur-3xl" />
+      <section className="relative isolate overflow-hidden pt-24 sm:pt-28">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(130deg,#fcfbf4_0%,#f8fbef_34%,#edf7da_68%,#dcefb7_100%)]" />
+        <div className="absolute left-[-10rem] top-28 -z-10 h-72 w-72 rounded-full bg-emerald-200/35 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-8rem] -z-10 h-[28rem] w-[28rem] rounded-full bg-[#c5e58f]/45 blur-3xl" />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:pb-24 lg:pt-16">
-          <div>
-            <p className="inline-flex flex-wrap items-center gap-2 rounded-full border border-emerald-700/15 bg-white/70 px-4 py-2 text-sm font-bold text-emerald-900 shadow-sm shadow-emerald-950/5">
-              <Star
-                aria-hidden="true"
-                className="fill-[#b89534] text-[#b89534]"
-                size={16}
-              />
-              <span className="font-script text-2xl font-normal leading-none text-emerald-800">
-                KM Education
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-16 pt-7 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:pb-24 lg:pt-14">
+          <div className="relative z-10 self-center">
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-white/75 px-4 py-2 text-sm font-medium text-emerald-900 shadow-sm shadow-emerald-950/5">
+                <Star
+                  aria-hidden="true"
+                  className="fill-[#b89534] text-[#b89534]"
+                  size={16}
+                />
+                <span className="font-script text-2xl font-normal leading-none text-emerald-800">
+                  KM Education
+                </span>
+              </p>
+              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-[#f3f9e9] px-4 py-2 text-sm font-medium text-[#3f642c]">
+                <BadgeCheck aria-hidden="true" size={16} />
+                Free trial available
+              </p>
+            </div>
+
+            <h1 className="mt-7 max-w-3xl text-left text-[clamp(3rem,7vw,5.35rem)] font-medium leading-[0.98] tracking-normal text-[#203325]">
+              <span className="block">Live online classes</span>
+              <span className="block text-[#536250]">
+                with a clear study plan
               </span>
-              <span>Online classes that help students learn with confidence.</span>
-            </p>
-            <h1 className="mt-7 max-w-4xl text-5xl font-bold leading-[1.02] tracking-tight text-[#203325] sm:text-6xl lg:text-7xl">
-              Online Classes That Help Students Learn Smarter, Stay Consistent,
-              and Feel Confident
+              <span className="block">
+                for confident progress.
+              </span>
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#66725f] sm:text-xl">
+
+            <div className="mt-7 max-w-2xl border-y border-emerald-900/12 py-4">
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  "Learn smarter",
+                  "Stay consistent",
+                  "Feel confident",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-emerald-100 text-emerald-700">
+                      <Check aria-hidden="true" size={17} />
+                    </span>
+                    <span className="text-base font-medium text-[#33483d]">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-7 max-w-xl text-lg leading-8 text-[#66725f]">
               Live, structured online lessons with expert teachers, clear study
               plans, progress support, and flexible class options for busy
               students.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-medium text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={20} />
                 Book a Free Trial Class
               </a>
               <a
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-emerald-900/15 bg-white/75 px-7 text-base font-bold text-[#24382f] shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700/30 hover:bg-white"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-emerald-900/15 bg-white/80 px-7 text-base font-medium text-[#24382f] shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700/30 hover:bg-white"
                 href="#classes"
               >
                 View Classes
                 <ArrowRight aria-hidden="true" size={19} />
               </a>
             </div>
-            <div className="mt-10 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
+
+            <div className="mt-8 grid max-w-2xl gap-x-6 gap-y-4 sm:grid-cols-2">
               {heroBenefits.map((benefit) => {
                 const Icon = benefit.icon;
 
                 return (
                   <div
                     key={benefit.label}
-                    className="rounded-3xl border border-white/70 bg-white/65 p-4 shadow-lg shadow-emerald-950/5 backdrop-blur"
+                    className="flex items-start gap-3"
                   >
-                    <Icon className="text-emerald-700" size={20} />
-                    <p className="mt-3 text-sm font-semibold leading-5 text-[#33483d]">
+                    <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/75 text-emerald-700 shadow-sm shadow-emerald-950/5">
+                      <Icon aria-hidden="true" size={18} />
+                    </span>
+                    <p className="text-sm font-medium leading-5 text-[#33483d]">
                       {benefit.label}
                     </p>
                   </div>
@@ -471,40 +506,68 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -left-6 top-10 hidden h-32 w-32 rotate-12 rounded-[2.5rem] border border-emerald-300/50 bg-white/35 backdrop-blur md:block" />
-            <div className="absolute -right-4 bottom-20 hidden h-28 w-44 -rotate-6 rounded-[2rem] border border-mint/70 bg-mint/25 backdrop-blur md:block" />
-            <div className="relative rounded-[2.5rem] border border-white/70 bg-white/55 p-3 shadow-[0_34px_90px_-38px_rgba(61,91,43,0.6)] backdrop-blur">
-              <div className="overflow-hidden rounded-[2rem] bg-[#3f642c]">
+          <div className="relative min-h-[36rem] lg:min-h-[40rem]">
+            <div className="absolute left-2 top-2 z-20 hidden w-60 rotate-[-4deg] rounded-[1.75rem] border border-emerald-900/10 bg-white/85 p-5 shadow-2xl shadow-emerald-950/12 backdrop-blur md:block">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                Trial match
+              </p>
+              <p className="mt-3 text-2xl font-medium leading-tight text-[#203325]">
+                Year 8 maths support
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-sm text-[#66725f]">
+                <Clock3 aria-hidden="true" size={17} />
+                Tue, 6:00 PM
+              </div>
+            </div>
+
+            <div className="absolute bottom-6 right-0 z-20 hidden w-64 rounded-[1.75rem] border border-white/70 bg-[#f7fbef]/90 p-5 shadow-2xl shadow-emerald-950/12 backdrop-blur md:block">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
+                  <MessageCircle aria-hidden="true" size={19} />
+                </span>
+                <div>
+                  <p className="text-sm font-medium text-[#203325]">
+                    Parent update
+                  </p>
+                  <p className="text-xs text-[#66725f]">Progress shared weekly</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute inset-x-5 top-8 rounded-[3rem] border border-white/75 bg-white/45 p-3 shadow-[0_34px_90px_-38px_rgba(61,91,43,0.65)] backdrop-blur sm:inset-x-10 lg:inset-x-0 lg:top-10">
+              <div className="overflow-hidden rounded-[2.35rem] bg-[#345426]">
                 <div className="flex items-center justify-between border-b border-white/10 bg-white/8 px-5 py-4 text-white">
                   <div className="flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-[#edc77b]" />
                     <span className="h-3 w-3 rounded-full bg-mint" />
                     <span className="h-3 w-3 rounded-full bg-emerald-400" />
                   </div>
-                  <span className="text-sm font-semibold text-mint">
-                    Live Class Studio
+                  <span className="text-sm font-medium text-mint">
+                    Live Online Class
                   </span>
                 </div>
-                <div className="grid gap-4 p-4 sm:grid-cols-[1.4fr_0.8fr]">
-                  <div className="relative min-h-[22rem] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_20%_20%,rgba(220,239,183,0.42),transparent_32%),linear-gradient(135deg,#72994a,#304b2e)] p-5 text-white">
-                    <div className="absolute inset-x-8 top-8 h-24 rotate-[-3deg] rounded-[2rem] border border-white/10 bg-white/10" />
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#263f2a] to-transparent" />
-                    <div className="relative flex h-full min-h-[19rem] flex-col justify-between">
-                      <div className="max-w-64 rounded-3xl border border-white/15 bg-white/12 p-4 backdrop-blur">
+
+                <div className="grid gap-4 p-4 lg:grid-cols-[1.25fr_0.8fr]">
+                  <div className="relative min-h-[24rem] overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_20%_20%,rgba(220,239,183,0.45),transparent_34%),linear-gradient(135deg,#7ba455,#263f2a)] p-5 text-white">
+                    <div className="absolute left-8 top-8 h-28 w-[72%] rotate-[-3deg] rounded-[2rem] border border-white/14 bg-white/12" />
+                    <div className="absolute right-6 top-20 h-20 w-20 rounded-full border border-white/20 bg-white/10" />
+                    <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#20351f] to-transparent" />
+                    <div className="relative flex min-h-[21rem] flex-col justify-between">
+                      <div className="max-w-72 rounded-[1.5rem] border border-white/16 bg-white/12 p-4 backdrop-blur">
                         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint">
                           Today&apos;s focus
                         </p>
-                        <p className="mt-2 text-xl font-bold">
-                          Algebra confidence sprint
+                        <p className="mt-2 text-2xl font-medium leading-tight">
+                          Clear steps, guided practice, better confidence
                         </p>
                       </div>
+
                       <div className="grid gap-3 sm:grid-cols-2">
-                        <div className="rounded-3xl border border-white/15 bg-white/12 p-4 backdrop-blur">
+                        <div className="rounded-[1.4rem] border border-white/15 bg-white/12 p-4 backdrop-blur">
                           <p className="text-sm text-mint">Teacher screen</p>
                           <div className="mt-4 h-24 rounded-2xl bg-white/15" />
                         </div>
-                        <div className="rounded-3xl border border-white/15 bg-white/12 p-4 backdrop-blur">
+                        <div className="rounded-[1.4rem] border border-white/15 bg-white/12 p-4 backdrop-blur">
                           <p className="text-sm text-mint">Student notes</p>
                           <div className="mt-4 space-y-2">
                             <span className="block h-2 rounded-full bg-white/35" />
@@ -530,16 +593,16 @@ export default function Home() {
                   <div className="grid gap-4">
                     <div className="rounded-[1.5rem] bg-[#f0f7df] p-5">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-sm font-bold text-[#24382f]">
+                        <p className="text-sm font-medium text-[#24382f]">
                           Weekly progress
                         </p>
                         <BarChart3 className="text-emerald-700" size={20} />
                       </div>
                       <div className="mt-5 space-y-3">
-                        {["Concept clarity", "Practice", "Confidence"].map(
+                        {["Clarity", "Practice", "Confidence"].map(
                           (label, index) => (
                             <div key={label}>
-                              <div className="mb-2 flex items-center justify-between text-xs font-semibold text-[#66725f]">
+                              <div className="mb-2 flex items-center justify-between text-xs font-medium text-[#66725f]">
                                 <span>{label}</span>
                                 <span>{78 + index * 6}%</span>
                               </div>
@@ -554,25 +617,41 @@ export default function Home() {
                         )}
                       </div>
                     </div>
-                    <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 text-white">
-                      <p className="text-sm font-semibold text-mint">
-                        Next live lesson
+
+                    <div className="rounded-[1.5rem] border border-white/12 bg-white/10 p-5 text-white">
+                      <p className="text-sm font-medium text-mint">
+                        Study plan
                       </p>
-                      <p className="mt-3 text-2xl font-bold">Tue, 6:00 PM</p>
-                      <p className="mt-2 text-sm leading-6 text-white/70">
-                        Flexible online access with clear reminders.
-                      </p>
-                    </div>
-                    <div className="rounded-[1.5rem] bg-white p-5">
-                      <div className="flex items-center gap-3">
-                        <div className="grid h-10 w-10 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
-                          <Check size={20} />
-                        </div>
-                        <p className="text-sm font-bold text-[#24382f]">
-                          Practice uploaded
-                        </p>
+                      <div className="mt-4 space-y-3">
+                        {["Live lesson", "Practice task", "Progress note"].map(
+                          (item) => (
+                            <div key={item} className="flex items-center gap-3">
+                              <Check aria-hidden="true" size={17} />
+                              <span className="text-sm text-white/78">{item}</span>
+                            </div>
+                          ),
+                        )}
                       </div>
                     </div>
+
+                    <a
+                      className="group inline-flex items-center justify-between rounded-[1.5rem] bg-white p-5 text-[#203325] transition hover:-translate-y-0.5"
+                      href="#booking"
+                    >
+                      <span>
+                        <span className="block text-sm font-medium text-[#66725f]">
+                          Start here
+                        </span>
+                        <span className="mt-1 block text-lg font-medium">
+                          Request your free trial
+                        </span>
+                      </span>
+                      <ArrowRight
+                        aria-hidden="true"
+                        className="transition group-hover:translate-x-1"
+                        size={22}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -589,7 +668,7 @@ export default function Home() {
             return (
               <div
                 key={item.label}
-                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-bold text-[#33483d]"
+                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-semibold text-[#33483d]"
               >
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800">
                   <Icon aria-hidden="true" size={19} />
@@ -605,7 +684,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Structure over pressure</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               Most students don&apos;t need more pressure — they need the right
               structure.
             </h2>
@@ -616,7 +695,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#f2e8c9] text-[#6f5b24]">
                   <Target aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-bold text-[#24382f]">
+                <h3 className="text-2xl font-semibold text-[#24382f]">
                   Common problems
                 </h3>
               </div>
@@ -637,7 +716,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/12 text-mint">
                   <HeartHandshake aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-bold">Our solution</h3>
+                <h3 className="text-2xl font-semibold">Our solution</h3>
               </div>
               <div className="mt-7 grid gap-3">
                 {solutions.map((solution) => (
@@ -669,12 +748,12 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <SectionEyebrow>Classes and programs</SectionEyebrow>
-              <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+              <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
                 Choose the right online class for your goals
               </h2>
             </div>
             <a
-              className="inline-flex h-[3.25rem] w-fit items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-emerald-900 shadow-sm transition hover:-translate-y-0.5"
+              className="inline-flex h-[3.25rem] w-fit items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-emerald-900 shadow-sm transition hover:-translate-y-0.5"
               href="#booking"
             >
               Compare options
@@ -693,11 +772,11 @@ export default function Home() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <IconBadge icon={Icon} />
-                    <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-800">
+                    <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-800">
                       {program.badge}
                     </span>
                   </div>
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#24382f]">
+                  <h3 className="mt-6 text-2xl font-semibold tracking-normal text-[#24382f]">
                     {program.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -705,7 +784,7 @@ export default function Home() {
                   </p>
                   <div className="mt-6 space-y-4 border-t border-emerald-900/10 pt-5">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
                         Ideal for
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -713,7 +792,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
                         What&apos;s included
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -723,7 +802,7 @@ export default function Home() {
                   </div>
                   <div className="mt-auto pt-7">
                     <a
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f8fbef] px-5 py-3 text-sm font-bold text-[#24382f] transition group-hover:border-emerald-700/25 group-hover:bg-[#3f642c] group-hover:text-white"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f8fbef] px-5 py-3 text-sm font-semibold text-[#24382f] transition group-hover:border-emerald-700/25 group-hover:bg-[#3f642c] group-hover:text-white"
                       href="#booking"
                     >
                       Book Trial
@@ -741,7 +820,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <SectionEyebrow>Simple start</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               Start learning in 3 simple steps
             </h2>
           </div>
@@ -758,10 +837,10 @@ export default function Home() {
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-3xl bg-[#3f642c] text-white shadow-xl shadow-emerald-950/20">
                     <Icon aria-hidden="true" size={26} />
                   </div>
-                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-bold uppercase tracking-[0.16em] text-emerald-800">
+                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
                     Step {index + 1}
                   </span>
-                  <h3 className="mt-4 text-2xl font-bold text-[#24382f]">
+                  <h3 className="mt-4 text-2xl font-semibold text-[#24382f]">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -773,7 +852,7 @@ export default function Home() {
           </div>
           <div className="mt-10 text-center">
             <a
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-semibold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={20} />
@@ -790,7 +869,7 @@ export default function Home() {
               <ShieldCheck aria-hidden="true" size={16} />
               Why choose us
             </p>
-            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
               Built for students who want clarity, confidence, and consistent
               progress
             </h2>
@@ -807,7 +886,7 @@ export default function Home() {
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15 text-mint">
                     <Icon aria-hidden="true" size={23} />
                   </span>
-                  <h3 className="mt-5 text-xl font-bold leading-snug">
+                  <h3 className="mt-5 text-xl font-semibold leading-snug">
                     {benefit.title}
                   </h3>
                 </div>
@@ -823,7 +902,7 @@ export default function Home() {
             <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="bg-[#f4faeb] p-8 sm:p-10 lg:p-12">
                 <SectionEyebrow>Results and impact</SectionEyebrow>
-                <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+                <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
                   Credible progress starts with consistent support
                 </h2>
                 <p className="mt-5 text-base leading-7 text-[#66725f]">
@@ -837,7 +916,7 @@ export default function Home() {
               <div className="grid gap-px bg-emerald-900/10 sm:grid-cols-2">
                 {stats.map((stat) => (
                   <div key={stat.label} className="bg-white p-8 sm:p-10">
-                    <p className="font-display text-6xl font-bold leading-none tracking-normal text-[#3f642c]">
+                    <p className="font-display text-6xl font-semibold leading-none tracking-normal text-[#3f642c]">
                       {stat.value}
                     </p>
                     <p className="mt-3 text-base font-semibold text-[#66725f]">
@@ -858,7 +937,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Student and parent voices</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               Hear from our students and parents
             </h2>
           </div>
@@ -877,12 +956,12 @@ export default function Home() {
                   >
                     <CirclePlay aria-hidden="true" size={32} />
                   </button>
-                  <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-emerald-900">
+                  <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-emerald-900">
                     Video testimonial
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#24382f]">
+                  <h3 className="text-xl font-semibold text-[#24382f]">
                     {testimonial.name}
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-emerald-700">
@@ -914,7 +993,7 @@ export default function Home() {
                 <p className="mt-5 text-lg leading-8 text-[#33483d]">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <p className="mt-5 text-sm font-bold text-emerald-800">
+                <p className="mt-5 text-sm font-semibold text-emerald-800">
                   {testimonial.name}
                 </p>
               </article>
@@ -927,7 +1006,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Learning experience</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               See what learning with us looks like
             </h2>
           </div>
@@ -946,7 +1025,7 @@ export default function Home() {
                       <Icon aria-hidden="true" size={25} />
                     </span>
                     <div>
-                      <h3 className="text-2xl font-bold text-[#24382f]">
+                      <h3 className="text-2xl font-semibold text-[#24382f]">
                         {item.title}
                       </h3>
                       <p className="mt-2 text-sm font-semibold text-[#66725f]">
@@ -965,7 +1044,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <SectionEyebrow>Teacher support</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               Supportive teachers. Structured lessons. Real progress.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#66725f]">
@@ -981,14 +1060,14 @@ export default function Home() {
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
                 <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
-                  <span className="font-display text-5xl font-bold tracking-normal">
+                  <span className="font-display text-5xl font-semibold tracking-normal">
                     T{index + 1}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-[#24382f]">
+                <h3 className="mt-5 text-xl font-semibold text-[#24382f]">
                   {teacher.name}
                 </h3>
-                <p className="mt-1 text-sm font-bold text-emerald-700">
+                <p className="mt-1 text-sm font-semibold text-emerald-700">
                   {teacher.specialty}
                 </p>
                 <p className="mt-4 text-sm leading-6 text-[#66725f]">
@@ -1005,11 +1084,11 @@ export default function Home() {
           <div className="grid gap-8 overflow-hidden rounded-[2.5rem] bg-[#3f642c] p-5 text-white shadow-[0_34px_90px_-46px_rgba(61,91,43,0.65)] lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
             <div className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-white/8 p-8">
               <div>
-                <p className="inline-flex items-center gap-2 rounded-full bg-mint/15 px-4 py-2 text-sm font-bold text-mint">
+                <p className="inline-flex items-center gap-2 rounded-full bg-mint/15 px-4 py-2 text-sm font-semibold text-mint">
                   <CalendarCheck aria-hidden="true" size={16} />
                   Free trial class
                 </p>
-                <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+                <h2 className="mt-6 text-4xl font-semibold tracking-normal sm:text-5xl">
                   Ready to try your first online class?
                 </h2>
                 <p className="mt-5 text-lg leading-8 text-white/74">
@@ -1038,7 +1117,7 @@ export default function Home() {
             <form className="rounded-[2rem] bg-white p-6 text-[#24382f] sm:p-8">
               <div className="flex flex-col justify-between gap-4 border-b border-emerald-900/10 pb-6 sm:flex-row sm:items-center">
                 <div>
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-2xl font-semibold">
                     Book a Free Trial Class
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-[#66725f]">
@@ -1046,7 +1125,7 @@ export default function Home() {
                     choose the best starting point.
                   </p>
                 </div>
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-800">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-800">
                   <BadgeCheck aria-hidden="true" size={15} />
                   UI placeholder
                 </span>
@@ -1088,7 +1167,7 @@ export default function Home() {
                 </label>
               </div>
               <button
-                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-bold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-semibold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
                 type="button"
               >
                 <CalendarCheck aria-hidden="true" size={20} />
@@ -1107,7 +1186,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <SectionEyebrow>FAQ</SectionEyebrow>
-            <h2 className="text-4xl font-bold tracking-tight text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
               Questions before your first class?
             </h2>
             <p className="mt-5 text-base leading-7 text-[#66725f]">
@@ -1121,7 +1200,7 @@ export default function Home() {
                 key={faq.question}
                 className="group rounded-[1.5rem] border border-emerald-900/10 bg-white p-5 shadow-sm"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-bold text-[#24382f]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-semibold text-[#24382f]">
                   {faq.question}
                   <ChevronDown
                     aria-hidden="true"
@@ -1157,7 +1236,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
                 Quick links
               </h3>
               <div className="mt-5 grid gap-3">
@@ -1173,7 +1252,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
                 Contact
               </h3>
               <div className="mt-5 grid gap-4 text-sm text-white/68">
@@ -1192,11 +1271,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
                 Start here
               </h3>
               <a
-                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-bold text-[#3f642c] transition hover:-translate-y-0.5 hover:bg-white"
+                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-semibold text-[#3f642c] transition hover:-translate-y-0.5 hover:bg-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -1207,7 +1286,7 @@ export default function Home() {
                   <a
                     key={social}
                     aria-label={`${social} social profile placeholder`}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-bold text-white/70 transition hover:bg-white hover:text-[#3f642c]"
+                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-semibold text-white/70 transition hover:bg-white hover:text-[#3f642c]"
                     href="#home"
                   >
                     {social}

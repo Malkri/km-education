@@ -1,43 +1,51 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/InstrumentSans-Regular.ttf") format("truetype");
+  font-family: "Albert Sans";
+  src: url("/fonts/AlbertSans-Regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/InstrumentSans-Medium.ttf") format("truetype");
+  font-family: "Albert Sans";
+  src: url("/fonts/AlbertSans-Medium.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/InstrumentSans-SemiBold.ttf") format("truetype");
+  font-family: "Albert Sans";
+  src: url("/fonts/AlbertSans-SemiBold.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/InstrumentSans-Bold.ttf") format("truetype");
+  font-family: "Albert Sans";
+  src: url("/fonts/AlbertSans-Bold.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-family: "Barlow Condensed";
+  src: url("/fonts/BarlowCondensed-Medium.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("/fonts/BarlowCondensed-SemiBold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
@@ -53,9 +61,8 @@
   --foreground: #24382f;
   --mint: #dcefb7;
   --pistachio: #93c45a;
-  --font-body: "Instrument Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  --font-display-stack: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --font-body: "Albert Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display-stack: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-script-stack: "Reenie Beanie", "Comic Sans MS", cursive;
 }
 
