@@ -279,7 +279,7 @@ function IconBadge({ icon: Icon }: { icon: LucideIcon }) {
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm shadow-emerald-950/5">
+    <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-4 py-2 text-sm font-normal text-emerald-800 shadow-sm shadow-emerald-950/5">
       <Sparkles aria-hidden="true" size={16} />
       {children}
     </p>
@@ -297,7 +297,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold text-[#33483d]">{label}</span>
+      <span className="text-sm font-normal text-[#33483d]">{label}</span>
       <input
         className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fcfbf4] px-4 text-sm text-[#24382f] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100"
         placeholder={placeholder}
@@ -316,7 +316,7 @@ function SelectField({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold text-[#33483d]">{label}</span>
+      <span className="text-sm font-normal text-[#33483d]">{label}</span>
       <select className="mt-2 h-12 w-full rounded-2xl border border-emerald-900/10 bg-[#fcfbf4] px-4 text-sm text-[#24382f] outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-100">
         {children}
       </select>
@@ -353,7 +353,7 @@ export default function Home() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                className="text-sm font-semibold text-[#536250] transition hover:text-emerald-800"
+                className="text-sm font-normal text-[#536250] transition hover:text-emerald-800"
                 href={link.href}
               >
                 {link.label}
@@ -363,7 +363,7 @@ export default function Home() {
 
           <div className="hidden lg:block">
             <a
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 text-sm font-semibold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 text-sm font-medium text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={18} />
@@ -390,7 +390,7 @@ export default function Home() {
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
-                    className="rounded-2xl px-4 py-3 text-sm font-semibold text-[#536250] transition hover:bg-emerald-50 hover:text-emerald-800"
+                    className="rounded-2xl px-4 py-3 text-sm font-normal text-[#536250] transition hover:bg-emerald-50 hover:text-emerald-800"
                     href={link.href}
                   >
                     {link.label}
@@ -398,7 +398,7 @@ export default function Home() {
                 ))}
               </div>
               <a
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 py-3 text-sm font-semibold text-white"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-5 py-3 text-sm font-medium text-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -417,7 +417,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-16 pt-7 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:pb-24 lg:pt-14">
           <div className="relative z-10 self-center">
             <div className="flex flex-wrap items-center gap-3">
-              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-white/75 px-4 py-2 text-sm font-medium text-emerald-900 shadow-sm shadow-emerald-950/5">
+              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-white/75 px-4 py-2 text-sm font-normal text-emerald-900 shadow-sm shadow-emerald-950/5">
                 <Star
                   aria-hidden="true"
                   className="fill-[#b89534] text-[#b89534]"
@@ -427,13 +427,13 @@ export default function Home() {
                   KM Education
                 </span>
               </p>
-              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-[#f3f9e9] px-4 py-2 text-sm font-medium text-[#3f642c]">
+              <p className="inline-flex items-center gap-2 rounded-full border border-emerald-700/15 bg-[#f3f9e9] px-4 py-2 text-sm font-normal text-[#3f642c]">
                 <BadgeCheck aria-hidden="true" size={16} />
                 Free trial available
               </p>
             </div>
 
-            <h1 className="mt-7 max-w-3xl text-left text-[clamp(3rem,7vw,5.35rem)] font-medium leading-[0.98] tracking-normal text-[#203325]">
+            <h1 className="mt-7 max-w-3xl text-left text-[clamp(3rem,7vw,5.35rem)] font-extrabold leading-[0.98] tracking-normal text-[#203325]">
               <span className="block">Live online classes</span>
               <span className="block text-[#536250]">
                 with a clear study plan
@@ -508,7 +508,7 @@ export default function Home() {
 
           <div className="relative min-h-[36rem] lg:min-h-[40rem]">
             <div className="absolute left-2 top-2 z-20 hidden w-60 rotate-[-4deg] rounded-[1.75rem] border border-emerald-900/10 bg-white/85 p-5 shadow-2xl shadow-emerald-950/12 backdrop-blur md:block">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+              <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
                 Trial match
               </p>
               <p className="mt-3 text-2xl font-medium leading-tight text-[#203325]">
@@ -554,7 +554,7 @@ export default function Home() {
                     <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#20351f] to-transparent" />
                     <div className="relative flex min-h-[21rem] flex-col justify-between">
                       <div className="max-w-72 rounded-[1.5rem] border border-white/16 bg-white/12 p-4 backdrop-blur">
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint">
+                        <p className="text-xs font-normal uppercase tracking-[0.18em] text-mint">
                           Today&apos;s focus
                         </p>
                         <p className="mt-2 text-2xl font-medium leading-tight">
@@ -668,7 +668,7 @@ export default function Home() {
             return (
               <div
                 key={item.label}
-                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-semibold text-[#33483d]"
+                className="flex items-center gap-3 rounded-2xl px-2 py-2 text-sm font-normal text-[#33483d]"
               >
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-emerald-100 text-emerald-800">
                   <Icon aria-hidden="true" size={19} />
@@ -684,7 +684,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Structure over pressure</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               Most students don&apos;t need more pressure — they need the right
               structure.
             </h2>
@@ -695,7 +695,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#f2e8c9] text-[#6f5b24]">
                   <Target aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-semibold text-[#24382f]">
+                <h3 className="text-2xl font-extrabold text-[#24382f]">
                   Common problems
                 </h3>
               </div>
@@ -716,7 +716,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/12 text-mint">
                   <HeartHandshake aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-semibold">Our solution</h3>
+                <h3 className="text-2xl font-extrabold">Our solution</h3>
               </div>
               <div className="mt-7 grid gap-3">
                 {solutions.map((solution) => (
@@ -729,7 +729,7 @@ export default function Home() {
                       className="mt-0.5 shrink-0 text-mint"
                       size={20}
                     />
-                    <span className="font-semibold text-white/88">
+                    <span className="font-medium text-white/88">
                       {solution}
                     </span>
                   </div>
@@ -748,12 +748,12 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <SectionEyebrow>Classes and programs</SectionEyebrow>
-              <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+              <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
                 Choose the right online class for your goals
               </h2>
             </div>
             <a
-              className="inline-flex h-[3.25rem] w-fit items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-emerald-900 shadow-sm transition hover:-translate-y-0.5"
+              className="inline-flex h-[3.25rem] w-fit items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-medium text-emerald-900 shadow-sm transition hover:-translate-y-0.5"
               href="#booking"
             >
               Compare options
@@ -772,11 +772,11 @@ export default function Home() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <IconBadge icon={Icon} />
-                    <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-800">
+                    <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-800">
                       {program.badge}
                     </span>
                   </div>
-                  <h3 className="mt-6 text-2xl font-semibold tracking-normal text-[#24382f]">
+                  <h3 className="mt-6 text-2xl font-extrabold tracking-normal text-[#24382f]">
                     {program.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -784,7 +784,7 @@ export default function Home() {
                   </p>
                   <div className="mt-6 space-y-4 border-t border-emerald-900/10 pt-5">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
                         Ideal for
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -792,7 +792,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
                         What&apos;s included
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -802,7 +802,7 @@ export default function Home() {
                   </div>
                   <div className="mt-auto pt-7">
                     <a
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f8fbef] px-5 py-3 text-sm font-semibold text-[#24382f] transition group-hover:border-emerald-700/25 group-hover:bg-[#3f642c] group-hover:text-white"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-900/10 bg-[#f8fbef] px-5 py-3 text-sm font-medium text-[#24382f] transition group-hover:border-emerald-700/25 group-hover:bg-[#3f642c] group-hover:text-white"
                       href="#booking"
                     >
                       Book Trial
@@ -820,7 +820,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <SectionEyebrow>Simple start</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               Start learning in 3 simple steps
             </h2>
           </div>
@@ -837,10 +837,10 @@ export default function Home() {
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-3xl bg-[#3f642c] text-white shadow-xl shadow-emerald-950/20">
                     <Icon aria-hidden="true" size={26} />
                   </div>
-                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
+                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-normal uppercase tracking-[0.16em] text-emerald-800">
                     Step {index + 1}
                   </span>
-                  <h3 className="mt-4 text-2xl font-semibold text-[#24382f]">
+                  <h3 className="mt-4 text-2xl font-extrabold text-[#24382f]">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -852,7 +852,7 @@ export default function Home() {
           </div>
           <div className="mt-10 text-center">
             <a
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-semibold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-medium text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
               href="#booking"
             >
               <CalendarCheck aria-hidden="true" size={20} />
@@ -865,11 +865,11 @@ export default function Home() {
       <section className="bg-[#3f642c] px-5 py-20 text-white sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-mint">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-mint">
               <ShieldCheck aria-hidden="true" size={16} />
               Why choose us
             </p>
-            <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal sm:text-5xl">
               Built for students who want clarity, confidence, and consistent
               progress
             </h2>
@@ -886,7 +886,7 @@ export default function Home() {
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15 text-mint">
                     <Icon aria-hidden="true" size={23} />
                   </span>
-                  <h3 className="mt-5 text-xl font-semibold leading-snug">
+                  <h3 className="mt-5 text-xl font-extrabold leading-snug">
                     {benefit.title}
                   </h3>
                 </div>
@@ -902,24 +902,24 @@ export default function Home() {
             <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="bg-[#f4faeb] p-8 sm:p-10 lg:p-12">
                 <SectionEyebrow>Results and impact</SectionEyebrow>
-                <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+                <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
                   Credible progress starts with consistent support
                 </h2>
                 <p className="mt-5 text-base leading-7 text-[#66725f]">
                   These statistic blocks are ready for verified outcomes,
                   confidence surveys, class counts, and student feedback.
                 </p>
-                <p className="mt-6 rounded-2xl border border-emerald-900/10 bg-white px-4 py-3 text-sm font-semibold text-emerald-900">
+                <p className="mt-6 rounded-2xl border border-emerald-900/10 bg-white px-4 py-3 text-sm font-medium text-emerald-900">
                   Replace these with your real numbers once available.
                 </p>
               </div>
               <div className="grid gap-px bg-emerald-900/10 sm:grid-cols-2">
                 {stats.map((stat) => (
                   <div key={stat.label} className="bg-white p-8 sm:p-10">
-                    <p className="font-display text-6xl font-semibold leading-none tracking-normal text-[#3f642c]">
+                    <p className="font-display text-6xl font-extrabold leading-none tracking-normal text-[#3f642c]">
                       {stat.value}
                     </p>
-                    <p className="mt-3 text-base font-semibold text-[#66725f]">
+                    <p className="mt-3 text-base font-medium text-[#66725f]">
                       {stat.label}
                     </p>
                   </div>
@@ -937,7 +937,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Student and parent voices</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               Hear from our students and parents
             </h2>
           </div>
@@ -956,15 +956,15 @@ export default function Home() {
                   >
                     <CirclePlay aria-hidden="true" size={32} />
                   </button>
-                  <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-emerald-900">
+                  <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-emerald-900">
                     Video testimonial
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#24382f]">
+                  <h3 className="text-xl font-extrabold text-[#24382f]">
                     {testimonial.name}
                   </h3>
-                  <p className="mt-1 text-sm font-semibold text-emerald-700">
+                  <p className="mt-1 text-sm font-medium text-emerald-700">
                     {testimonial.role}
                   </p>
                   <p className="mt-4 text-sm leading-6 text-[#66725f]">
@@ -993,7 +993,7 @@ export default function Home() {
                 <p className="mt-5 text-lg leading-8 text-[#33483d]">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <p className="mt-5 text-sm font-semibold text-emerald-800">
+                <p className="mt-5 text-sm font-medium text-emerald-800">
                   {testimonial.name}
                 </p>
               </article>
@@ -1006,7 +1006,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Learning experience</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               See what learning with us looks like
             </h2>
           </div>
@@ -1025,10 +1025,10 @@ export default function Home() {
                       <Icon aria-hidden="true" size={25} />
                     </span>
                     <div>
-                      <h3 className="text-2xl font-semibold text-[#24382f]">
+                      <h3 className="text-2xl font-extrabold text-[#24382f]">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm font-semibold text-[#66725f]">
+                      <p className="mt-2 text-sm font-medium text-[#66725f]">
                         {item.description}
                       </p>
                     </div>
@@ -1044,7 +1044,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <SectionEyebrow>Teacher support</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               Supportive teachers. Structured lessons. Real progress.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#66725f]">
@@ -1060,14 +1060,14 @@ export default function Home() {
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
                 <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
-                  <span className="font-display text-5xl font-semibold tracking-normal">
+                  <span className="font-display text-5xl font-extrabold tracking-normal">
                     T{index + 1}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-[#24382f]">
+                <h3 className="mt-5 text-xl font-extrabold text-[#24382f]">
                   {teacher.name}
                 </h3>
-                <p className="mt-1 text-sm font-semibold text-emerald-700">
+                <p className="mt-1 text-sm font-medium text-emerald-700">
                   {teacher.specialty}
                 </p>
                 <p className="mt-4 text-sm leading-6 text-[#66725f]">
@@ -1084,11 +1084,11 @@ export default function Home() {
           <div className="grid gap-8 overflow-hidden rounded-[2.5rem] bg-[#3f642c] p-5 text-white shadow-[0_34px_90px_-46px_rgba(61,91,43,0.65)] lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
             <div className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-white/8 p-8">
               <div>
-                <p className="inline-flex items-center gap-2 rounded-full bg-mint/15 px-4 py-2 text-sm font-semibold text-mint">
+                <p className="inline-flex items-center gap-2 rounded-full bg-mint/15 px-4 py-2 text-sm font-medium text-mint">
                   <CalendarCheck aria-hidden="true" size={16} />
                   Free trial class
                 </p>
-                <h2 className="mt-6 text-4xl font-semibold tracking-normal sm:text-5xl">
+                <h2 className="mt-6 text-4xl font-extrabold tracking-normal sm:text-5xl">
                   Ready to try your first online class?
                 </h2>
                 <p className="mt-5 text-lg leading-8 text-white/74">
@@ -1106,7 +1106,7 @@ export default function Home() {
                     <span className="grid h-9 w-9 place-items-center rounded-2xl bg-white/10 text-mint">
                       <Check aria-hidden="true" size={18} />
                     </span>
-                    <span className="text-sm font-semibold text-white/82">
+                    <span className="text-sm font-medium text-white/82">
                       {line}
                     </span>
                   </div>
@@ -1117,7 +1117,7 @@ export default function Home() {
             <form className="rounded-[2rem] bg-white p-6 text-[#24382f] sm:p-8">
               <div className="flex flex-col justify-between gap-4 border-b border-emerald-900/10 pb-6 sm:flex-row sm:items-center">
                 <div>
-                  <h3 className="text-2xl font-semibold">
+                  <h3 className="text-2xl font-extrabold">
                     Book a Free Trial Class
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-[#66725f]">
@@ -1125,7 +1125,7 @@ export default function Home() {
                     choose the best starting point.
                   </p>
                 </div>
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-800">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-800">
                   <BadgeCheck aria-hidden="true" size={15} />
                   UI placeholder
                 </span>
@@ -1156,7 +1156,7 @@ export default function Home() {
                   <option>One-on-One Online Coaching</option>
                 </SelectField>
                 <label className="block sm:col-span-2">
-                  <span className="text-sm font-semibold text-[#33483d]">
+                  <span className="text-sm font-normal text-[#33483d]">
                     Preferred time
                   </span>
                   <input
@@ -1167,7 +1167,7 @@ export default function Home() {
                 </label>
               </div>
               <button
-                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-semibold text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
+                className="mt-7 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#3f642c] px-7 text-base font-medium text-white shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-[#345426]"
                 type="button"
               >
                 <CalendarCheck aria-hidden="true" size={20} />
@@ -1186,7 +1186,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <SectionEyebrow>FAQ</SectionEyebrow>
-            <h2 className="text-4xl font-semibold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
               Questions before your first class?
             </h2>
             <p className="mt-5 text-base leading-7 text-[#66725f]">
@@ -1200,7 +1200,7 @@ export default function Home() {
                 key={faq.question}
                 className="group rounded-[1.5rem] border border-emerald-900/10 bg-white p-5 shadow-sm"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-semibold text-[#24382f]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-medium text-[#24382f]">
                   {faq.question}
                   <ChevronDown
                     aria-hidden="true"
@@ -1236,14 +1236,14 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
                 Quick links
               </h3>
               <div className="mt-5 grid gap-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
-                    className="text-sm font-semibold text-white/68 transition hover:text-white"
+                    className="text-sm font-normal text-white/68 transition hover:text-white"
                     href={link.href}
                   >
                     {link.label}
@@ -1252,7 +1252,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
                 Contact
               </h3>
               <div className="mt-5 grid gap-4 text-sm text-white/68">
@@ -1271,11 +1271,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
                 Start here
               </h3>
               <a
-                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-semibold text-[#3f642c] transition hover:-translate-y-0.5 hover:bg-white"
+                className="mt-5 inline-flex h-[3.25rem] items-center justify-center gap-2 rounded-full bg-mint px-6 text-sm font-medium text-[#3f642c] transition hover:-translate-y-0.5 hover:bg-white"
                 href="#booking"
               >
                 <CalendarCheck aria-hidden="true" size={18} />
@@ -1286,7 +1286,7 @@ export default function Home() {
                   <a
                     key={social}
                     aria-label={`${social} social profile placeholder`}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-semibold text-white/70 transition hover:bg-white hover:text-[#3f642c]"
+                    className="grid h-10 w-10 place-items-center rounded-full border border-white/12 text-xs font-medium text-white/70 transition hover:bg-white hover:text-[#3f642c]"
                     href="#home"
                   >
                     {social}
