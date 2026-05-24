@@ -433,7 +433,7 @@ export default function Home() {
               </p>
             </div>
 
-            <h1 className="mt-7 max-w-3xl text-left text-[clamp(3rem,7vw,5.35rem)] font-extrabold leading-[0.98] tracking-normal text-[#203325]">
+            <h1 className="mt-7 max-w-3xl text-left text-[clamp(3rem,7vw,5.35rem)] font-medium leading-[0.98] tracking-normal text-[#203325]">
               <span className="block">Live online classes</span>
               <span className="block text-[#536250]">
                 with a clear study plan
@@ -684,7 +684,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Structure over pressure</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               Most students don&apos;t need more pressure — they need the right
               structure.
             </h2>
@@ -695,7 +695,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#f2e8c9] text-[#6f5b24]">
                   <Target aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-extrabold text-[#24382f]">
+                <h3 className="text-2xl font-medium text-[#24382f]">
                   Common problems
                 </h3>
               </div>
@@ -716,7 +716,7 @@ export default function Home() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/12 text-mint">
                   <HeartHandshake aria-hidden="true" size={22} />
                 </span>
-                <h3 className="text-2xl font-extrabold">Our solution</h3>
+                <h3 className="text-2xl font-medium">Our solution</h3>
               </div>
               <div className="mt-7 grid gap-3">
                 {solutions.map((solution) => (
@@ -748,7 +748,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <SectionEyebrow>Classes and programs</SectionEyebrow>
-              <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+              <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
                 Choose the right online class for your goals
               </h2>
             </div>
@@ -776,7 +776,7 @@ export default function Home() {
                       {program.badge}
                     </span>
                   </div>
-                  <h3 className="mt-6 text-2xl font-extrabold tracking-normal text-[#24382f]">
+                  <h3 className="mt-6 text-2xl font-medium tracking-normal text-[#24382f]">
                     {program.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -820,7 +820,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <SectionEyebrow>Simple start</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               Start learning in 3 simple steps
             </h2>
           </div>
@@ -840,7 +840,7 @@ export default function Home() {
                   <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-normal uppercase tracking-[0.16em] text-emerald-800">
                     Step {index + 1}
                   </span>
-                  <h3 className="mt-4 text-2xl font-extrabold text-[#24382f]">
+                  <h3 className="mt-4 text-2xl font-medium text-[#24382f]">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#66725f]">
@@ -869,7 +869,7 @@ export default function Home() {
               <ShieldCheck aria-hidden="true" size={16} />
               Why choose us
             </p>
-            <h2 className="text-4xl font-extrabold tracking-normal sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal sm:text-5xl">
               Built for students who want clarity, confidence, and consistent
               progress
             </h2>
@@ -886,7 +886,7 @@ export default function Home() {
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15 text-mint">
                     <Icon aria-hidden="true" size={23} />
                   </span>
-                  <h3 className="mt-5 text-xl font-extrabold leading-snug">
+                  <h3 className="mt-5 text-xl font-medium leading-snug">
                     {benefit.title}
                   </h3>
                 </div>
@@ -902,7 +902,7 @@ export default function Home() {
             <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="bg-[#f4faeb] p-8 sm:p-10 lg:p-12">
                 <SectionEyebrow>Results and impact</SectionEyebrow>
-                <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+                <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
                   Credible progress starts with consistent support
                 </h2>
                 <p className="mt-5 text-base leading-7 text-[#66725f]">
@@ -916,7 +916,7 @@ export default function Home() {
               <div className="grid gap-px bg-emerald-900/10 sm:grid-cols-2">
                 {stats.map((stat) => (
                   <div key={stat.label} className="bg-white p-8 sm:p-10">
-                    <p className="font-display text-6xl font-extrabold leading-none tracking-normal text-[#3f642c]">
+                    <p className="font-display text-6xl font-medium leading-none tracking-normal text-[#3f642c]">
                       {stat.value}
                     </p>
                     <p className="mt-3 text-base font-medium text-[#66725f]">
@@ -937,7 +937,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Student and parent voices</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               Hear from our students and parents
             </h2>
           </div>
@@ -961,7 +961,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-extrabold text-[#24382f]">
+                  <h3 className="text-xl font-medium text-[#24382f]">
                     {testimonial.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-emerald-700">
@@ -1006,7 +1006,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionEyebrow>Learning experience</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               See what learning with us looks like
             </h2>
           </div>
@@ -1025,7 +1025,7 @@ export default function Home() {
                       <Icon aria-hidden="true" size={25} />
                     </span>
                     <div>
-                      <h3 className="text-2xl font-extrabold text-[#24382f]">
+                      <h3 className="text-2xl font-medium text-[#24382f]">
                         {item.title}
                       </h3>
                       <p className="mt-2 text-sm font-medium text-[#66725f]">
@@ -1044,7 +1044,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <SectionEyebrow>Teacher support</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               Supportive teachers. Structured lessons. Real progress.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#66725f]">
@@ -1060,11 +1060,11 @@ export default function Home() {
                 className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_24px_70px_-50px_rgba(61,91,43,0.45)]"
               >
                 <div className="grid aspect-square place-items-center rounded-[1.5rem] bg-[linear-gradient(135deg,#3f642c,#93c45a)] text-white">
-                  <span className="font-display text-5xl font-extrabold tracking-normal">
+                  <span className="font-display text-5xl font-medium tracking-normal">
                     T{index + 1}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-extrabold text-[#24382f]">
+                <h3 className="mt-5 text-xl font-medium text-[#24382f]">
                   {teacher.name}
                 </h3>
                 <p className="mt-1 text-sm font-medium text-emerald-700">
@@ -1088,7 +1088,7 @@ export default function Home() {
                   <CalendarCheck aria-hidden="true" size={16} />
                   Free trial class
                 </p>
-                <h2 className="mt-6 text-4xl font-extrabold tracking-normal sm:text-5xl">
+                <h2 className="mt-6 text-4xl font-medium tracking-normal sm:text-5xl">
                   Ready to try your first online class?
                 </h2>
                 <p className="mt-5 text-lg leading-8 text-white/74">
@@ -1117,7 +1117,7 @@ export default function Home() {
             <form className="rounded-[2rem] bg-white p-6 text-[#24382f] sm:p-8">
               <div className="flex flex-col justify-between gap-4 border-b border-emerald-900/10 pb-6 sm:flex-row sm:items-center">
                 <div>
-                  <h3 className="text-2xl font-extrabold">
+                  <h3 className="text-2xl font-medium">
                     Book a Free Trial Class
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-[#66725f]">
@@ -1186,7 +1186,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <SectionEyebrow>FAQ</SectionEyebrow>
-            <h2 className="text-4xl font-extrabold tracking-normal text-[#203325] sm:text-5xl">
+            <h2 className="text-4xl font-medium tracking-normal text-[#203325] sm:text-5xl">
               Questions before your first class?
             </h2>
             <p className="mt-5 text-base leading-7 text-[#66725f]">

@@ -1,27 +1,19 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-Regular.ttf") format("truetype");
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-Medium.ttf") format("truetype");
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 500;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-ExtraBold.ttf") format("truetype");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 800;
 }
 
 :root {
@@ -29,7 +21,7 @@
   --foreground: #24382f;
   --mint: #dcefb7;
   --pistachio: #93c45a;
-  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Satoshi", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display-stack: var(--font-body);
   --font-script-stack: var(--font-body);
 }
@@ -70,7 +62,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
 }
 
@@ -80,7 +72,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 ::selection {
