@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("/fonts/Inter-Medium.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 500;
@@ -21,7 +21,7 @@
   --foreground: #24382f;
   --mint: #dcefb7;
   --pistachio: #93c45a;
-  --font-body: "Satoshi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display-stack: var(--font-body);
   --font-script-stack: var(--font-body);
 }
