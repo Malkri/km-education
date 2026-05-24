@@ -508,7 +508,7 @@ export default function Home() {
 
           <div className="relative min-h-[36rem] lg:min-h-[40rem]">
             <div className="absolute left-2 top-2 z-20 hidden w-60 rotate-[-4deg] rounded-[1.75rem] border border-emerald-900/10 bg-white/85 p-5 shadow-2xl shadow-emerald-950/12 backdrop-blur md:block">
-              <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
+              <p className="text-xs font-normal uppercase text-emerald-700">
                 Trial match
               </p>
               <p className="mt-3 text-2xl font-medium leading-tight text-[#203325]">
@@ -554,7 +554,7 @@ export default function Home() {
                     <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#20351f] to-transparent" />
                     <div className="relative flex min-h-[21rem] flex-col justify-between">
                       <div className="max-w-72 rounded-[1.5rem] border border-white/16 bg-white/12 p-4 backdrop-blur">
-                        <p className="text-xs font-normal uppercase tracking-[0.18em] text-mint">
+                        <p className="text-xs font-normal uppercase text-mint">
                           Today&apos;s focus
                         </p>
                         <p className="mt-2 text-2xl font-medium leading-tight">
@@ -784,7 +784,7 @@ export default function Home() {
                   </p>
                   <div className="mt-6 space-y-4 border-t border-emerald-900/10 pt-5">
                     <div>
-                      <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-normal uppercase text-emerald-700">
                         Ideal for
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -792,7 +792,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs font-normal uppercase tracking-[0.16em] text-emerald-700">
+                      <p className="text-xs font-normal uppercase text-emerald-700">
                         What&apos;s included
                       </p>
                       <p className="mt-2 text-sm leading-6 text-[#536250]">
@@ -837,7 +837,7 @@ export default function Home() {
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-3xl bg-[#3f642c] text-white shadow-xl shadow-emerald-950/20">
                     <Icon aria-hidden="true" size={26} />
                   </div>
-                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-normal uppercase tracking-[0.16em] text-emerald-800">
+                  <span className="mt-6 inline-flex h-8 items-center rounded-full bg-emerald-50 px-3 text-xs font-normal uppercase text-emerald-800">
                     Step {index + 1}
                   </span>
                   <h3 className="mt-4 text-2xl font-medium text-[#24382f]">
@@ -1236,7 +1236,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase text-mint">
                 Quick links
               </h3>
               <div className="mt-5 grid gap-3">
@@ -1252,7 +1252,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase text-mint">
                 Contact
               </h3>
               <div className="mt-5 grid gap-4 text-sm text-white/68">
@@ -1271,7 +1271,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-normal uppercase tracking-[0.16em] text-mint">
+              <h3 className="text-sm font-normal uppercase text-mint">
                 Start here
               </h3>
               <a
