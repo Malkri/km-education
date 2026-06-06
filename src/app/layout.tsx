@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500"] });
+
 export const metadata: Metadata = {
-  title: "KM Education | Online Classes That Build Confidence",
+  title: "KM Education — Live online classes for Years 7–12",
   description:
-    "Live, structured online classes with supportive teachers, clear study plans, and flexible trial booking for students and parents.",
+    "Live online tutoring for Australian high school students with a clear study plan for confident progress. Book a free trial.",
+  openGraph: {
+    title: "KM Education — Live online classes for Years 7–12",
+    description:
+      "Live online tutoring for Australian high school students with a clear study plan for confident progress.",
+  },
 };
 
 export default function RootLayout({
@@ -13,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={inter.className}>
+      <body>{children}</body>
     </html>
   );
 }
