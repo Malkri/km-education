@@ -1,8 +1,8 @@
 const stats = [
-  { n: "[X]+", label: "Students Supported" },
-  { n: "[X]%", label: "Improved Confidence" },
-  { n: "[X]+", label: "Classes Delivered" },
-  { n: "[X]/5", label: "Average Rating" },
+  { n: "4×", label: "Raw 50 Study Scores" },
+  { n: "3×", label: "Premier's Awards" },
+  { n: "99.95", label: "ATAR Achievers" },
+  { n: "40+", label: "Raw 40+ Study Scores" },
 ];
 
 export function Stats() {

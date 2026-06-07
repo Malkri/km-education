@@ -1,15 +1,15 @@
 const problems = [
-  "Falling behind in complex subjects",
-  "Studying without a clear plan or structure",
-  "Low confidence in exams and assessments",
-  "Lack of individual support in busy classrooms",
+  "Tutoring that overloads you with content",
+  "Repetitive practice with no clear exam strategy",
+  "Generic teaching that ignores what actually scores marks",
+  "No support between classes when you're stuck",
 ];
 
 const solutions = [
-  "Structured weekly learning aligned to curriculum",
-  "Supportive specialist teachers",
-  "Practice-focused learning for real results",
-  "Continuous feedback and progress tracking",
+  "Weekly test-taking opportunities — not just passive learning",
+  "Study techniques that maximise marks and minimise time",
+  "Exam strategy built by Raw 50 and Premier's Award scorers",
+  "Focused practice — because practice doesn't make perfect, it makes permanent",
 ];
 
 export function ProblemSolution() {

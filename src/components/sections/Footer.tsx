@@ -37,7 +37,7 @@ export function Footer() {
             KM<span className="text-paper/40">EDUCATION</span>
           </div>
           <p className="text-sm text-paper/50 font-light leading-relaxed">
-            Live online classes with a clear study plan for confident progress.
+            Elite Melbourne VCE tutoring for 99.95 ATAR and Raw 50 results — English, Methods, and Specialist Maths.
           </p>
         </div>
         <div>
@@ -56,9 +56,9 @@ export function Footer() {
             Contact
           </h5>
           <ul className="space-y-3 text-sm font-light text-paper/60">
-            <li>hello@kmeducation.com.au</li>
-            <li>+61 (0) 000 000 000</li>
-            <li>Online · Australia-wide</li>
+            <li>welcome@km-education.com</li>
+            <li>0492 994 810</li>
+            <li>Online · Melbourne & Victoria</li>
           </ul>
         </div>
         <div>

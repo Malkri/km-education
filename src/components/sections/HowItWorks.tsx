@@ -1,18 +1,18 @@
 const steps = [
   {
     n: "01",
-    title: "Choose your class",
-    desc: "Select from our range of curriculum-aligned online sessions.",
+    title: "Book a free consultation",
+    desc: "Tell us your subject, year level, and goals. We'll map the right program for your target score.",
   },
   {
     n: "02",
-    title: "Book a free trial",
-    desc: "Meet your teacher and experience the platform with no commitment.",
+    title: "Join live weekly classes",
+    desc: "Attend structured online sessions with Raw 50 tutors. Unmute any time — it's a real classroom, online.",
   },
   {
     n: "03",
-    title: "Join live & track progress",
-    desc: "Attend live lessons and receive weekly progress updates.",
+    title: "Practise, get feedback, improve",
+    desc: "Weekly test opportunities, essay feedback, and 24/7 support outside class to keep momentum all year.",
   },
 ];
 

@@ -25,10 +25,10 @@ export function BookingForm() {
             Get Started
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight leading-tight mt-4 mb-8 text-balance">
-            Ready to try your first online class?
+            Start your journey to your dream ATAR.
           </h2>
           <p className="text-ink/60 font-light mb-10 text-lg">
-            No pressure. No commitment. Just see if it&apos;s the right fit for your child.
+            Book your free trial today. No pressure, no commitment — just see if it&apos;s the right fit.
           </p>
           <ul className="space-y-4">
             {reassurance.map((r) => (
@@ -77,10 +77,10 @@ export function BookingForm() {
               <label className={labelClass}>Class Interest</label>
               <select required className={inputClass} defaultValue="">
                 <option value="" disabled>Select</option>
-                <option>Academic Support</option>
-                <option>Exam Preparation</option>
-                <option>Skill-Building</option>
-                <option>1:1 Online Coaching</option>
+                <option>VCE English</option>
+                <option>VCE Mathematical Methods</option>
+                <option>VCE Specialist Maths</option>
+                <option>All Subjects</option>
               </select>
             </div>
           </div>

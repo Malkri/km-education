@@ -1,10 +1,10 @@
 const tiles = [
-  { kicker: "01 / Interaction", title: "Live interactive lessons", desc: "Real-time dialogue between students and educators, not pre-recorded videos." },
-  { kicker: "02 / Flexibility", title: "Small group or individual", desc: "Find the format and pace that suits your child's learning style best." },
-  { kicker: "03 / Structure", title: "Structured weekly plans", desc: "Every lesson builds on the last, with clear objectives and outcomes." },
-  { kicker: "04 / Expertise", title: "Expert teachers", desc: "Hand-picked tutors with deep subject knowledge and classroom experience." },
-  { kicker: "05 / Feedback", title: "Practice tasks and feedback", desc: "Regular homework and assessment feedback that meaningfully drives growth." },
-  { kicker: "06 / Transparency", title: "Parent-friendly updates", desc: "Concise reports on attendance, effort, and academic growth each week." },
+  { kicker: "01 / Resources", title: "In-house Raw 50 resources", desc: "Hundreds of pages of content written by Raw 50 scorers — no generic textbooks, no recycled worksheets." },
+  { kicker: "02 / Strategy", title: "Exam strategy, not just content", desc: "We teach students how exams are constructed and how to outperform under time pressure — not just what to memorise." },
+  { kicker: "03 / Practice", title: "Weekly test opportunities", desc: "Practice doesn't make perfect — it makes permanent. Regular test conditions build real exam confidence." },
+  { kicker: "04 / UDFs", title: "Custom CAS UDF programs", desc: "Students gain access to Krishav's personally coded CAS UDFs — an unfair competitive advantage in SACs and exams." },
+  { kicker: "05 / Support", title: "24/7 support outside class", desc: "Help with difficult questions, SAC revision, and exam prep any day, any time — you're never stuck studying alone." },
+  { kicker: "06 / Results", title: "Proven state-topping results", desc: "Multiple 99.95 ATAR and Raw 50 achievers across English, Methods, and Specialist Maths every year." },
 ];
 
 export function WhyChooseUs() {
@@ -16,7 +16,7 @@ export function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
-            Designed for serious progress, calmly delivered.
+            Among the best Melbourne VCE tutoring providers.
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">

@@ -1,8 +1,8 @@
 const items = [
-  "Live Online Classes",
-  "Experienced Teachers",
-  "Parent Progress Updates",
-  "Flexible Schedules",
+  "99.95 ATAR Achievers",
+  "Raw 50 Study Scores",
+  "3× Premier's Award Winner",
+  "Online Melbourne VCE Tutoring",
   "Free Trial Available",
 ];
 

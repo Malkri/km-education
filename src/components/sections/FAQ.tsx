@@ -6,13 +6,12 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "How do online classes work?", a: "Students join a live video session at the scheduled time via our online platform. Lessons are interactive, with screen sharing, digital whiteboards, and real-time discussion." },
-  { q: "Is the trial class free?", a: "Yes. Your first trial class is completely free with no commitment. It's a chance to meet your teacher and see how our approach fits your child." },
-  { q: "Are classes live or recorded?", a: "All classes are live. Recordings of group lessons may be available afterwards for revision, depending on the program." },
-  { q: "Do you offer one-on-one support?", a: "Yes. Our 1:1 Online Coaching program is fully personalised, with sessions tailored to your child's pace and goals." },
-  { q: "How do parents track progress?", a: "Parents receive regular updates on attendance, effort, and academic growth, so you always know how your child is progressing." },
-  { q: "What subjects do you offer?", a: "We cover the major Year 7–12 subjects across the Australian curriculum, including Maths, English, Science, and more." },
-  { q: "Can students join from anywhere?", a: "Yes. Classes are fully online, so students can join from anywhere in Australia with a reliable internet connection." },
+  { q: "What makes KM Education different for VCE tutoring?", a: "We focus on precisely what you need to score well. No generic textbook content — we make our own in-house resources prepared by Raw 50 scorers. No generic teaching — all our tutors are high-scoring students with prior tutoring experience. The result: you save time AND score high. Our student results prove that our method works." },
+  { q: "Is tutoring worth it for VCE?", a: "Absolutely — especially for students aiming very high, for competitive courses, for students needing prerequisite scores for uni, and for students wishing to save time studying. Tutoring is similar to an athlete having a coach. You get a clear roadmap: what to study, how to study, how long to study for — and a support system that helps you 24/7, any day, any time." },
+  { q: "Is online VCE tutoring effective?", a: "Definitely. Online tutoring means you save precious Year 12 hours travelling, and can learn the same content. At KM Education, we offer small group classes where you can unmute at any time — simulating a real classroom environment in our online classes." },
+  { q: "How often should I have tutoring for VCE?", a: "Most high-performing students receive regular tutoring throughout the year. Our resources are top-tier — far better than any textbook or free online questions. The earlier you start, the more time you'll have to digest, practise and apply our hundreds of pages of Raw 50 content." },
+  { q: "What subjects do you offer?", a: "We offer elite VCE tutoring in English, Mathematical Methods, and Specialist Maths — all designed by Raw 50 and Premier's Award scorers." },
+  { q: "Can students join from anywhere in Melbourne?", a: "Yes. All classes are fully online, so students can join from anywhere across Melbourne and Victoria with a reliable internet connection." },
 ];
 
 export function FAQ() {

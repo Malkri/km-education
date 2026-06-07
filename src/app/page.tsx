@@ -6,8 +6,8 @@ import { Programs } from "@/components/sections/Programs";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Stats } from "@/components/sections/Stats";
+import { Results } from "@/components/sections/Results";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Gallery } from "@/components/sections/Gallery";
 import { Teachers } from "@/components/sections/Teachers";
 import { BookingForm } from "@/components/sections/BookingForm";
 import { FAQ } from "@/components/sections/FAQ";
@@ -24,8 +24,8 @@ export default function Home() {
       <HowItWorks />
       <WhyChooseUs />
       <Stats />
+      <Results />
       <Testimonials />
-      <Gallery />
       <Teachers />
       <BookingForm />
       <FAQ />

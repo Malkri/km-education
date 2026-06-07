@@ -1,27 +1,24 @@
 const programs = [
   {
-    title: "Academic Support",
-    desc: "Weekly ongoing support to keep students aligned with school curriculum.",
-    ideal: "Consistent Improvement",
+    title: "VCE English",
+    desc: "Develop unique arguments, sophisticated analysis, and exam-ready essays designed to score 40+ with ease. Every 2026 text covered.",
+    ideal: "40+ & Raw 50",
     featured: false,
+    href: "#book",
   },
   {
-    title: "Exam Preparation",
-    desc: "Focused test readiness with past papers and proven exam techniques.",
-    ideal: "Final Assessments",
-    featured: false,
-  },
-  {
-    title: "Skill-Building",
-    desc: "Strengthening foundations and building core academic confidence.",
-    ideal: "Closing Gaps",
-    featured: false,
-  },
-  {
-    title: "1:1 Coaching",
-    desc: "Personalised online sessions tailored to individual goals and pace.",
-    ideal: "Specific Goals",
+    title: "VCE Methods",
+    desc: "Master problem-solving, exam techniques, and custom CAS UDFs to dominate SACs and VCAA exams.",
+    ideal: "Raw 40+ & Raw 50",
     featured: true,
+    href: "#book",
+  },
+  {
+    title: "VCE Specialist Maths",
+    desc: "Understand the complexities of Spesh with clear explanations, CAS UDFs, live walkthroughs, and elite practice material.",
+    ideal: "40+, 45+ & Raw 50",
+    featured: false,
+    href: "#book",
   },
 ];
 
@@ -35,14 +32,14 @@ export function Programs() {
               Our Programs
             </span>
             <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
-              Specialised classes for Years 7–12
+              Melbourne VCE Tutoring Across Key Subjects
             </h2>
           </div>
           <p className="text-paper/60 font-light max-w-sm">
-            Curated to support the Australian curriculum across every stage of high school.
+            All programs designed by Raw 50 and Premier&apos;s Award scorers — nothing generic.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {programs.map((p) => (
             <div
               key={p.title}
@@ -59,7 +56,7 @@ export function Programs() {
                 Ideal for: {p.ideal}
               </div>
               <a
-                href="#book"
+                href={p.href}
                 className={
                   "block text-center py-3 text-[10px] uppercase tracking-[0.2em] font-light transition-colors " +
                   (p.featured

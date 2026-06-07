@@ -1,16 +1,97 @@
-import { Play, Star } from "lucide-react";
-import { Placeholder } from "./Placeholder";
+"use client";
+
+import { useRef, useState } from "react";
+import { Star, Play, Pause } from "lucide-react";
 
 const videos = [
-  { quote: "[Short parent or student quote placeholder.]", name: "[Name Placeholder], Parent" },
-  { quote: "[Short parent or student quote placeholder.]", name: "[Name Placeholder], Year 12" },
-  { quote: "[Short parent or student quote placeholder.]", name: "[Name Placeholder], Year 10" },
+  {
+    src: "/ranusha-testimonial.mov",
+    name: "Ranusha",
+    role: "KM Education Student",
+  },
+  {
+    src: "/tanmay-testimonial.mp4",
+    name: "Tanmay",
+    role: "Raw 49 · MHS · 99.65 ATAR",
+  },
 ];
 
-const written = [
-  { quote: "[Longer written testimonial placeholder describing the experience and the change it created.]", name: "[Name Placeholder]", role: "Parent of Year 11 Student" },
-  { quote: "[Longer written testimonial placeholder describing the experience and the change it created.]", name: "[Name Placeholder]", role: "Year 9 Student" },
+const testimonials = [
+  {
+    quote: "I'm really glad I chose to go with KM Education. The invaluable insights, comprehensive notes and exemplary model responses helped me approach English — which I had so dreaded at the start of the year — with newfound confidence. KM Education's expertise in writing, teaching and constructive feedback allowed me to improve my essay writing and gain a profound and nuanced understanding of texts and arguments.",
+    name: "Patrick Phan",
+    role: "Raw 50 English · MHS Dux 2024 · 99.95 ATAR",
+  },
+  {
+    quote: "What I really liked about the classes was that they were structured, organised and complemented by a myriad of practice prompts and resources. Classes delved really deep into the text and presented ideas which were seldom discussed elsewhere. This helped me craft nuanced essays which I was very happy with — especially important in light of the new study design.",
+    name: "Elaine Zhang",
+    role: "Raw 50 + Premier's Award English · Haileybury Dux 2024 · 99.95 ATAR",
+  },
+  {
+    quote: "KM Education is a most excellent teacher — very enthusiastic about teaching maths and knows everything there is to know about both Methods and Specialist. Their resources and support services are extremely useful, as well as the UDFs Krishav coded himself which saved me so much time in my exams. What I found different was the focus on realistic exam scenarios — not overly difficult questions beyond VCE level that aren't useful for the real exam.",
+    name: "Dan Ngo",
+    role: "99.7 ATAR · Raw 44 Methods · Raw 40 Specialist · PEGS 2025",
+  },
+  {
+    quote: "I found that I could gain better mastery of concepts through appreciating the nuances between similar question types, rather than spending my time sporadically working through different materials. By the time exams rolled around, I was just consolidating techniques I had practised all year. I was able to achieve a dream study score I never thought was possible — but which the tutors at KM Education always believed I could accomplish.",
+    name: "Ethan Wu",
+    role: "99.98 ATAR · Raw 48 Specialist · Raw 47 Methods · MHS 2025",
+  },
+  {
+    quote: "Before joining, I had struggled with difficult questions I had never seen before, particularly since my school liked to put curveball questions on SACs. The biggest help was KM Education's knowledge of the full breadth of question types that can appear, alongside ensuring intuitive understanding of all concepts. The step-by-step approaches made solving difficult questions much more manageable.",
+    name: "Jian Shi",
+    role: "Raw 46 Methods · Raw 41 Specialist · MHS",
+  },
 ];
+
+function VideoCard({ src, name, role }: { src: string; name: string; role: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  function toggle() {
+    const v = videoRef.current;
+    if (!v) return;
+    if (playing) {
+      v.pause();
+      setPlaying(false);
+    } else {
+      v.play();
+      setPlaying(true);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="relative aspect-video bg-ink overflow-hidden group cursor-pointer" onClick={toggle}>
+        <video
+          ref={videoRef}
+          src={src}
+          className="w-full h-full object-cover"
+          onEnded={() => setPlaying(false)}
+          playsInline
+        />
+        {!playing && (
+          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 group-hover:bg-ink/30 transition-colors">
+            <div className="size-16 rounded-full bg-paper/90 flex items-center justify-center text-brand shadow-md group-hover:scale-105 transition-transform">
+              <Play className="size-6 ml-1 fill-brand" />
+            </div>
+          </div>
+        )}
+        {playing && (
+          <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="size-9 rounded-full bg-ink/60 flex items-center justify-center text-paper">
+              <Pause className="size-4 fill-paper" />
+            </div>
+          </div>
+        )}
+      </div>
+      <div>
+        <p className="text-sm font-light">{name}</p>
+        <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">{role}</p>
+      </div>
+    </div>
+  );
+}
 
 export function Testimonials() {
   return (
@@ -18,42 +99,34 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-2xl">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
-            Testimonials
+            Student Results
           </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">In their own words.</h2>
+          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
+            Real results — 99.95 ATAR & Raw 50 achievements.
+          </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {videos.map((v, i) => (
-            <div key={i} className="space-y-5">
-              <div className="aspect-video relative group cursor-pointer">
-                <Placeholder label="Video testimonial · placeholder">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="size-14 rounded-full bg-paper/90 flex items-center justify-center text-brand group-hover:scale-110 transition-transform shadow-sm">
-                      <Play className="size-5 ml-0.5 fill-brand" />
-                    </div>
-                  </div>
-                </Placeholder>
-              </div>
-              <p className="text-sm italic font-light text-ink/70">&ldquo;{v.quote}&rdquo;</p>
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-ink/40">
-                — {v.name}
-              </p>
-            </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {videos.map((v) => (
+            <VideoCard key={v.src} {...v} />
           ))}
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {written.map((w, i) => (
-            <div key={i} className="p-10 border border-ink/5 bg-sand/30 space-y-6">
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <div key={i} className="p-8 border border-ink/5 bg-sand/30 space-y-5 flex flex-col">
               <div className="flex gap-1 text-brand">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="size-4 fill-brand" />
+                  <Star key={j} className="size-3.5 fill-brand" />
                 ))}
               </div>
-              <p className="text-lg font-light text-ink/80 italic">&ldquo;{w.quote}&rdquo;</p>
+              <p className="text-sm font-light text-ink/80 italic leading-relaxed flex-grow">
+                &ldquo;{t.quote}&rdquo;
+              </p>
               <div>
-                <p className="text-sm font-light">{w.name}</p>
-                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-ink/40 mt-1">
-                  {w.role}
+                <p className="text-sm font-light">{t.name}</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
+                  {t.role}
                 </p>
               </div>
             </div>
