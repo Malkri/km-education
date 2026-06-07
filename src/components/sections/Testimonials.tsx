@@ -75,25 +75,27 @@ export function Testimonials() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="p-8 border border-ink/5 bg-sand/30 space-y-5 flex flex-col">
-              <div className="flex gap-1 text-brand">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="size-3.5 fill-brand" />
-                ))}
-              </div>
-              <p className="text-sm font-light text-ink/80 italic leading-relaxed flex-grow">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div>
-                <p className="text-sm font-light">{t.name}</p>
-                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
-                  {t.role}
+        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] group">
+          <div className="flex gap-6 animate-marquee w-max group-hover:[animation-play-state:paused]">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <div key={i} className="p-8 border border-ink/5 bg-sand/30 space-y-5 flex flex-col w-[380px] shrink-0">
+                <div className="flex gap-1 text-brand">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star key={j} className="size-3.5 fill-brand" />
+                  ))}
+                </div>
+                <p className="text-sm font-light text-ink/80 italic leading-relaxed flex-grow">
+                  &ldquo;{t.quote}&rdquo;
                 </p>
+                <div>
+                  <p className="text-sm font-light">{t.name}</p>
+                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
+                    {t.role}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
