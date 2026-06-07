@@ -1,16 +1,13 @@
-"use client";
-
-import { useRef, useState } from "react";
-import { Star, Play, Pause } from "lucide-react";
+import { Star } from "lucide-react";
 
 const videos = [
   {
-    src: "/ranusha-testimonial.mov",
+    src: "https://drive.google.com/file/d/1sJPNamHRSR4vUmqVakL81O-jfTaELDYj/preview",
     name: "Ranusha",
     role: "KM Education Student",
   },
   {
-    src: "/tanmay-testimonial.mp4",
+    src: "https://drive.google.com/file/d/1pa8tlXE2FWexTIaEq5vtR6nZ2fb6WS-6/preview",
     name: "Tanmay",
     role: "Raw 49 · MHS · 99.65 ATAR",
   },
@@ -44,55 +41,6 @@ const testimonials = [
   },
 ];
 
-function VideoCard({ src, name, role }: { src: string; name: string; role: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-
-  function toggle() {
-    const v = videoRef.current;
-    if (!v) return;
-    if (playing) {
-      v.pause();
-      setPlaying(false);
-    } else {
-      v.play();
-      setPlaying(true);
-    }
-  }
-
-  return (
-    <div className="space-y-4">
-      <div className="relative aspect-video bg-ink overflow-hidden group cursor-pointer" onClick={toggle}>
-        <video
-          ref={videoRef}
-          src={src}
-          className="w-full h-full object-cover"
-          onEnded={() => setPlaying(false)}
-          playsInline
-        />
-        {!playing && (
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 group-hover:bg-ink/30 transition-colors">
-            <div className="size-16 rounded-full bg-paper/90 flex items-center justify-center text-brand shadow-md group-hover:scale-105 transition-transform">
-              <Play className="size-6 ml-1 fill-brand" />
-            </div>
-          </div>
-        )}
-        {playing && (
-          <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-            <div className="size-9 rounded-full bg-ink/60 flex items-center justify-center text-paper">
-              <Pause className="size-4 fill-paper" />
-            </div>
-          </div>
-        )}
-      </div>
-      <div>
-        <p className="text-sm font-light">{name}</p>
-        <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">{role}</p>
-      </div>
-    </div>
-  );
-}
-
 export function Testimonials() {
   return (
     <section className="py-24 lg:py-32 px-6">
@@ -108,7 +56,22 @@ export function Testimonials() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {videos.map((v) => (
-            <VideoCard key={v.src} {...v} />
+            <div key={v.src} className="space-y-4">
+              <div className="relative aspect-video bg-ink overflow-hidden">
+                <iframe
+                  src={v.src}
+                  className="w-full h-full"
+                  allow="autoplay"
+                  allowFullScreen
+                />
+              </div>
+              <div>
+                <p className="text-sm font-light">{v.name}</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
+                  {v.role}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
 
