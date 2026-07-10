@@ -3,13 +3,13 @@ import { Star } from "lucide-react";
 const videos = [
   {
     src: "https://drive.google.com/file/d/1sJPNamHRSR4vUmqVakL81O-jfTaELDYj/preview",
-    name: "Ranusha",
-    role: "KM Education Student",
+    name: "Tanmay",
+    role: "Raw 49 · MHS · 99.65 ATAR",
   },
   {
     src: "https://drive.google.com/file/d/1pa8tlXE2FWexTIaEq5vtR6nZ2fb6WS-6/preview",
-    name: "Tanmay",
-    role: "Raw 49 · MHS · 99.65 ATAR",
+    name: "Ranusha",
+    role: "Raw 44 · St Kevin's College",
   },
 ];
 
@@ -32,7 +32,7 @@ const testimonials = [
   {
     quote: "I found that I could gain better mastery of concepts through appreciating the nuances between similar question types, rather than spending my time sporadically working through different materials. By the time exams rolled around, I was just consolidating techniques I had practised all year. I was able to achieve a dream study score I never thought was possible — but which the tutors at KM Education always believed I could accomplish.",
     name: "Ethan Wu",
-    role: "99.98 ATAR · Raw 48 Specialist · Raw 47 Methods · MHS 2025",
+    role: "99.80 ATAR · Raw 48 Specialist · Raw 47 Methods · MHS 2025",
   },
   {
     quote: "Before joining, I had struggled with difficult questions I had never seen before, particularly since my school liked to put curveball questions on SACs. The biggest help was KM Education's knowledge of the full breadth of question types that can appear, alongside ensuring intuitive understanding of all concepts. The step-by-step approaches made solving difficult questions much more manageable.",

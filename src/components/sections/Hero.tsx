@@ -8,8 +8,10 @@ export function Hero() {
           VCE Tutoring · Melbourne · Australia
         </span>
         <h1 className="text-5xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-balance mb-10 max-w-[18ch]">
-          Melbourne VCE Tutoring for{" "}
-          <span className="italic text-brand">99.95 ATAR & Raw 50 Results.</span>
+          Melbourne VCE Tutoring.{" "}
+          <span className="italic text-brand">
+            Helping students study smarter, build confidence, and maximise their ATAR.
+          </span>
         </h1>
         <p className="text-base lg:text-lg font-light text-ink/60 max-w-xl mb-10">
           We help high-performing students achieve elite results in VCE English, Methods, and

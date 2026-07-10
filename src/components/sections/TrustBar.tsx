@@ -2,7 +2,6 @@ const items = [
   "99.95 ATAR Achievers",
   "Raw 50 Study Scores",
   "3× Premier's Award Winner",
-  "Online Melbourne VCE Tutoring",
   "Free Trial Available",
 ];
 

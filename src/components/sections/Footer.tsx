@@ -46,7 +46,6 @@ export function Footer() {
           </h5>
           <ul className="space-y-3 text-sm font-light text-paper/60">
             <li><a href="#programs" className="hover:text-paper transition-colors">Programs</a></li>
-            <li><a href="#how" className="hover:text-paper transition-colors">How It Works</a></li>
             <li><a href="#results" className="hover:text-paper transition-colors">Results</a></li>
             <li><a href="#faq" className="hover:text-paper transition-colors">FAQ</a></li>
           </ul>
@@ -58,7 +57,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm font-light text-paper/60">
             <li>welcome@km-education.com</li>
             <li>0492 994 810</li>
-            <li>Online · Melbourne & Victoria</li>
+            <li>Melbourne & Victoria</li>
           </ul>
         </div>
         <div>

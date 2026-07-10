@@ -5,13 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 export const metadata: Metadata = {
-  title: "KM Education — Live online classes for Years 7–12",
+  title: "KM Education — Melbourne VCE Tutoring",
   description:
-    "Live online tutoring for Australian high school students with a clear study plan for confident progress. Book a free trial.",
+    "Melbourne VCE tutoring for high-performing students with a clear study plan for confident progress. Book a free trial.",
   openGraph: {
-    title: "KM Education — Live online classes for Years 7–12",
+    title: "KM Education — Melbourne VCE Tutoring",
     description:
-      "Live online tutoring for Australian high school students with a clear study plan for confident progress.",
+      "Melbourne VCE tutoring for high-performing students with a clear study plan for confident progress.",
   },
 };
 
