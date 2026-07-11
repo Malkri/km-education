@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -14,8 +15,8 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md border-b border-ink/5">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="text-lg tracking-tight font-light text-brand">
-          KM<span className="text-ink/40">EDUCATION</span>
+        <a href="#top" className="block relative h-8 w-32">
+          <Image src="/km-education-logo.png" alt="KM Education" fill className="object-contain object-left" priority />
         </a>
         <div className="hidden md:flex items-center gap-10 text-[11px] font-light uppercase tracking-[0.2em]">
           {links.map((l) => (

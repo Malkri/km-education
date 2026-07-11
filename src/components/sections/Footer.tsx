@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const socialIcons = [
   {
     label: "Instagram",
@@ -33,8 +35,8 @@ export function Footer() {
     <footer className="bg-ink text-paper py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <div className="text-lg tracking-tight font-light text-brand mb-4">
-            KM<span className="text-paper/40">EDUCATION</span>
+          <div className="relative h-8 w-32 mb-4 invert">
+            <Image src="/km-education-logo.png" alt="KM Education" fill className="object-contain object-left" />
           </div>
         </div>
         <div>
