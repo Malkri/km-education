@@ -1,8 +1,6 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
 import { Programs } from "@/components/sections/Programs";
-import { Stats } from "@/components/sections/Stats";
 import { Results } from "@/components/sections/Results";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Teachers } from "@/components/sections/Teachers";
@@ -15,8 +13,6 @@ export default function Home() {
     <main className="bg-paper text-ink min-h-screen scroll-smooth">
       <Navbar />
       <Hero />
-      <TrustBar />
-      <Stats />
       <Results />
       <Testimonials />
       <Teachers />

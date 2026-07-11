@@ -50,7 +50,7 @@ export function Testimonials() {
             Student Results
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
-            Real results — 99.95 ATAR & Raw 50 achievements.
+            Testimonials from KM Education students.
           </h2>
         </div>
 
@@ -67,7 +67,7 @@ export function Testimonials() {
               </div>
               <div>
                 <p className="text-sm font-light">{v.name}</p>
-                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
+                <p className="text-xs font-mono uppercase tracking-[0.2em] text-brand mt-1">
                   {v.role}
                 </p>
               </div>
@@ -89,7 +89,7 @@ export function Testimonials() {
                 </p>
                 <div>
                   <p className="text-sm font-light">{t.name}</p>
-                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-brand mt-1">
+                  <p className="text-xs font-mono uppercase tracking-[0.2em] text-brand mt-1">
                     {t.role}
                   </p>
                 </div>

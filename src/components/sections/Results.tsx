@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const results = [
   { name: "Elaine Z.", school: "Haileybury", score: "RAW 50", atar: "99.95" },
   { name: "Patrick P.", school: "MHS", score: "RAW 50", atar: "99.95" },
@@ -13,30 +17,35 @@ const results = [
   { name: "Daania", school: "Al Taqwa", score: "Raw 46", atar: "—" },
 ];
 
+const INITIAL_COUNT = 6;
+
 export function Results() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? results : results.slice(0, INITIAL_COUNT);
+
   return (
-    <section className="py-24 lg:py-32 px-6 bg-ink text-paper">
+    <section id="results" className="py-24 lg:py-32 px-6 bg-ink text-paper">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
             Our Results
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
-            Real results — our students don&apos;t just improve, they excel.
+            KM Education Results — our students topped the state.
           </h2>
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm font-light">
+          <table className="w-full text-base font-light">
             <thead>
               <tr className="border-b border-paper/10">
-                <th className="text-left text-[10px] uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">Student</th>
-                <th className="text-left text-[10px] uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">School</th>
-                <th className="text-left text-[10px] uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">Study Score</th>
-                <th className="text-left text-[10px] uppercase tracking-[0.2em] text-brand font-mono py-4">ATAR</th>
+                <th className="text-left text-xs uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">Student</th>
+                <th className="text-left text-xs uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">School</th>
+                <th className="text-left text-xs uppercase tracking-[0.2em] text-brand font-mono py-4 pr-8">Study Score</th>
+                <th className="text-left text-xs uppercase tracking-[0.2em] text-brand font-mono py-4">ATAR</th>
               </tr>
             </thead>
             <tbody>
-              {results.map((r, i) => (
+              {visible.map((r, i) => (
                 <tr key={i} className="border-b border-paper/5 hover:bg-paper/5 transition-colors">
                   <td className="py-4 pr-8 text-paper/90">{r.name}</td>
                   <td className="py-4 pr-8 text-paper/50">{r.school}</td>
@@ -47,7 +56,15 @@ export function Results() {
             </tbody>
           </table>
         </div>
-        <p className="text-paper/40 text-sm font-light mt-6 font-mono">
+        {results.length > INITIAL_COUNT && (
+          <button
+            onClick={() => setShowAll((v) => !v)}
+            className="mt-8 border border-paper/20 px-6 py-3 text-xs uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"
+          >
+            {showAll ? "Show fewer results" : "Show more results"}
+          </button>
+        )}
+        <p className="text-paper/40 text-base font-light mt-6 font-mono">
           …and many more Raw 40+ study scores.
         </p>
       </div>

@@ -15,14 +15,14 @@ export function Hero() {
         </h1>
         <p className="text-base lg:text-lg font-light text-ink/60 max-w-xl mb-10">
           We help high-performing students achieve elite results in VCE English, Methods, and
-          Specialist Maths — with proven systems designed for Raw 50 success.
+          Specialist Maths.
         </p>
         <div className="flex flex-wrap gap-4">
           <a
             href="#book"
             className="bg-brand text-paper px-8 py-4 text-[11px] uppercase tracking-[0.2em] font-light hover:bg-ink transition-colors"
           >
-            Book a Free Consultation
+            Book a Free Trial
           </a>
           <a
             href="#programs"

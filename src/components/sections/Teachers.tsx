@@ -1,10 +1,10 @@
 import { Placeholder } from "./Placeholder";
 
 const achievements = [
-  "4 Raw 50 study scores — English, Specialist Maths, Mathematics, Physics",
-  "3 Premier's Awards — Specialist Maths, Mathematics, Physics",
-  "Only person in the state to achieve this combination (1 in 50,000)",
-  "Featured in The Age and Herald Sun",
+  "99.95 ATAR and Dux of MHS",
+  "Published in The Age and Herald Sun for excellent ATAR results",
+  "4× Raw 50's (state record, #1 out of 50,000) and 3× Premier's Award (also state record, #1 out of 50,000)",
+  "Dream student outcomes such as Monash Medicine, Chancellor's Scholarships, and Engineering",
 ];
 
 export function Teachers() {
@@ -15,7 +15,7 @@ export function Teachers() {
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
             Who We Are
           </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">Built on state-topping performance.</h2>
+          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">What makes KM Education different.</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
           <div className="aspect-[3/4] relative">
@@ -28,13 +28,25 @@ export function Teachers() {
                 Founder · KM Education
               </p>
             </div>
-            <p className="text-base font-light text-ink/70 leading-relaxed">
-              When I was in Year 12, I realised something early: there was no shortage of tutoring in
-              Melbourne — but there was a shortage of clarity. Most programs overloaded students with
-              content, relied on repetitive practice, and lacked a clear system for achieving top
-              results. KM Education was created to answer the question: what actually separates a 40
-              from a Raw 50?
-            </p>
+            <div className="space-y-5 text-base font-light text-ink/70 leading-relaxed">
+              <p>
+                Hi! I&apos;m Krishav, the founder of KM Education. At KM Education, we understand one
+                thing: most students don&apos;t struggle because they&apos;re lazy.
+              </p>
+              <p>
+                They struggle because nobody has shown them exactly what examiners want. Every lesson
+                is built around one key philosophy:
+              </p>
+              <p className="italic text-brand text-xl">Confidence comes from clarity.</p>
+              <p>
+                Instead of overwhelming students with content, we design our own notes and resources
+                covering only what examiners will assess. This saves students precious time, and helps
+                them score top marks.
+              </p>
+              <p>
+                As founder of KM Education, I personally used these principles for my own success:
+              </p>
+            </div>
             <ul className="space-y-3">
               {achievements.map((a) => (
                 <li key={a} className="flex items-start gap-4 text-sm font-light text-ink/70">

@@ -36,9 +36,6 @@ export function Footer() {
           <div className="text-lg tracking-tight font-light text-brand mb-4">
             KM<span className="text-paper/40">EDUCATION</span>
           </div>
-          <p className="text-sm text-paper/50 font-light leading-relaxed">
-            Elite Melbourne VCE tutoring for 99.95 ATAR and Raw 50 results — English, Methods, and Specialist Maths.
-          </p>
         </div>
         <div>
           <h5 className="text-[10px] uppercase tracking-[0.2em] text-brand mb-6 font-mono">

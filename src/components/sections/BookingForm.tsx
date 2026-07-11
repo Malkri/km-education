@@ -8,7 +8,7 @@ export function BookingForm() {
   };
 
   const reassurance = [
-    "Free 45-minute trial session",
+    "Free trial lesson",
     "No commitment, no payment required",
     "Personalised study plan recommendation",
   ];
@@ -63,30 +63,15 @@ export function BookingForm() {
             <label className={labelClass}>Phone</label>
             <input type="tel" required className={inputClass} />
           </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <label className={labelClass}>Year Level</label>
-              <select required className={inputClass} defaultValue="">
-                <option value="" disabled>Select</option>
-                {[7, 8, 9, 10, 11, 12].map((y) => (
-                  <option key={y} value={`Year ${y}`}>Year {y}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className={labelClass}>Class Interest</label>
-              <select required className={inputClass} defaultValue="">
-                <option value="" disabled>Select</option>
-                <option>VCE English</option>
-                <option>VCE Mathematical Methods</option>
-                <option>VCE Specialist Maths</option>
-                <option>All Subjects</option>
-              </select>
-            </div>
-          </div>
           <div>
-            <label className={labelClass}>Preferred Time</label>
-            <input type="text" placeholder="e.g. Weekdays after 4pm" className={inputClass} />
+            <label className={labelClass}>Subject</label>
+            <select required className={inputClass} defaultValue="">
+              <option value="" disabled>Select</option>
+              <option>VCE English</option>
+              <option>VCE Mathematical Methods</option>
+              <option>VCE Specialist Maths</option>
+              <option>All Subjects</option>
+            </select>
           </div>
           <button
             type="submit"
