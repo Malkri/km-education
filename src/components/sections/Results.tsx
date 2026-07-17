@@ -19,8 +19,8 @@ const results = [
 
 const INITIAL_COUNT = 6;
 
-export function Results() {
-  const [showAll, setShowAll] = useState(false);
+export function Results({ showAllDefault = false }: { showAllDefault?: boolean }) {
+  const [showAll, setShowAll] = useState(showAllDefault);
   const visible = showAll ? results : results.slice(0, INITIAL_COUNT);
 
   return (
@@ -56,7 +56,7 @@ export function Results() {
             </tbody>
           </table>
         </div>
-        {results.length > INITIAL_COUNT && (
+        {!showAllDefault && results.length > INITIAL_COUNT && (
           <button
             onClick={() => setShowAll((v) => !v)}
             className="mt-8 border border-paper/20 px-6 py-3 text-xs uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"

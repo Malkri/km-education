@@ -44,9 +44,9 @@ export function Footer() {
             Quick Links
           </h5>
           <ul className="space-y-3 text-sm font-light text-paper/60">
-            <li><a href="#programs" className="hover:text-paper transition-colors">Programs</a></li>
-            <li><a href="#results" className="hover:text-paper transition-colors">Results</a></li>
-            <li><a href="#faq" className="hover:text-paper transition-colors">FAQ</a></li>
+            <li><a href="/#programs" className="hover:text-paper transition-colors">Programs</a></li>
+            <li><a href="/results" className="hover:text-paper transition-colors">Results</a></li>
+            <li><a href="/#faq" className="hover:text-paper transition-colors">FAQ</a></li>
           </ul>
         </div>
         <div>
@@ -71,7 +71,7 @@ export function Footer() {
             ))}
           </div>
           <a
-            href="#book"
+            href="/#book"
             className="block w-full text-center bg-brand py-3 text-[10px] uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"
           >
             Book a Free Trial

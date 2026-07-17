@@ -3,19 +3,19 @@ const programs = [
     title: "VCE Methods",
     desc: "Master problem-solving, exam techniques and the CAS to dominate SACs and VCAA exams.",
     featured: true,
-    href: "#book",
+    href: "/vce-methods",
   },
   {
     title: "VCE English",
     desc: "Develop unique arguments, sophisticated analysis, and exam-ready essays designed to score 40+ with ease. Every 2026 text covered.",
     featured: false,
-    href: "#book",
+    href: "/vce-english",
   },
   {
     title: "VCE Specialist Maths",
     desc: "Understand tricky concepts with simple explanations, live walkthroughs, unlimited support out-of-class, CAS support for SACs and exams.",
     featured: false,
-    href: "#book",
+    href: "/vce-specialist-maths",
   },
 ];
 
@@ -53,7 +53,7 @@ export function Programs() {
                     : "border border-paper/20 hover:bg-paper hover:text-ink")
                 }
               >
-                Book Trial
+                Learn More
               </a>
             </div>
           ))}
