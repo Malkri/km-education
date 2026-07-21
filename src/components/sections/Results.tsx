@@ -56,17 +56,17 @@ export function Results({ showAllDefault = false }: { showAllDefault?: boolean }
             </tbody>
           </table>
         </div>
+        <p className="text-paper/40 text-base font-light mt-6 font-mono">
+          …and many more Raw 40+ study scores.
+        </p>
         {!showAllDefault && results.length > INITIAL_COUNT && (
           <button
             onClick={() => setShowAll((v) => !v)}
-            className="mt-8 border border-paper/20 px-6 py-3 text-xs uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"
+            className="mt-6 border border-paper/20 px-6 py-3 text-xs uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"
           >
             {showAll ? "Show fewer results" : "Show more results"}
           </button>
         )}
-        <p className="text-paper/40 text-base font-light mt-6 font-mono">
-          …and many more Raw 40+ study scores.
-        </p>
       </div>
     </section>
   );

@@ -46,10 +46,7 @@ export function Testimonials() {
     <section className="py-24 lg:py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-2xl">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
-            Student Results
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
+          <h2 className="text-4xl lg:text-5xl font-extralight">
             Testimonials from KM Education students.
           </h2>
         </div>

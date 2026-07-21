@@ -24,11 +24,8 @@ export function Programs() {
     <section id="programs" className="py-24 lg:py-32 px-6 bg-ink text-paper">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
-            Our Programs
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">
-            Melbourne VCE Tutoring Across Key Subjects
+          <h2 className="text-4xl lg:text-5xl font-extralight">
+            VCE Subjects Offered
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -46,12 +43,7 @@ export function Programs() {
               <p className="text-sm text-paper/60 font-light flex-grow mb-8">{p.desc}</p>
               <a
                 href={p.href}
-                className={
-                  "block text-center py-3 text-[10px] uppercase tracking-[0.2em] font-light transition-colors " +
-                  (p.featured
-                    ? "bg-brand text-paper hover:bg-paper hover:text-ink"
-                    : "border border-paper/20 hover:bg-paper hover:text-ink")
-                }
+                className="block text-center py-3 text-[10px] uppercase tracking-[0.2em] font-light transition-colors bg-brand text-paper hover:bg-paper hover:text-ink"
               >
                 Learn More
               </a>

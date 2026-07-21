@@ -10,7 +10,14 @@ export function BookingForm() {
   const reassurance = [
     "Free trial lesson",
     "No commitment, no payment required",
-    "Personalised study plan recommendation",
+  ];
+
+  const subjectOptions = [
+    "VCE English Units 3 and 4",
+    "VCE Methods Units 3 and 4",
+    "VCE Specialist Math Units 3 and 4",
+    "VCE English Units 1 and 2",
+    "VCE Methods Units 1 and 2",
   ];
 
   const inputClass =
@@ -21,14 +28,11 @@ export function BookingForm() {
     <section id="book" className="py-24 lg:py-32 px-6 bg-brand/5">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
         <div className="lg:sticky lg:top-24">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
-            Get Started
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight leading-tight mt-4 mb-8 text-balance">
+          <h2 className="text-4xl lg:text-5xl font-extralight leading-tight mb-8 text-balance">
             Start your journey to your dream ATAR.
           </h2>
           <p className="text-ink/60 font-light mb-10 text-lg">
-            Book your free trial today. No pressure, no commitment — just see if it&apos;s the right fit.
+            Book your free trial today — just see if it&apos;s the right fit.
           </p>
           <ul className="space-y-4">
             {reassurance.map((r) => (
@@ -64,14 +68,15 @@ export function BookingForm() {
             <input type="tel" required className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Subject</label>
-            <select required className={inputClass} defaultValue="">
-              <option value="" disabled>Select</option>
-              <option>VCE English</option>
-              <option>VCE Mathematical Methods</option>
-              <option>VCE Specialist Maths</option>
-              <option>All Subjects</option>
-            </select>
+            <label className={labelClass}>Subject(s)</label>
+            <div className="grid grid-cols-1 gap-3 pt-2">
+              {subjectOptions.map((s) => (
+                <label key={s} className="flex items-center gap-3 text-sm font-light cursor-pointer">
+                  <input type="checkbox" name="subjects" value={s} className="accent-brand size-4" />
+                  {s}
+                </label>
+              ))}
+            </div>
           </div>
           <button
             type="submit"

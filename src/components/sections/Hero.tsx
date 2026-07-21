@@ -4,9 +4,6 @@ export function Hero() {
   return (
     <header id="top" className="min-h-[88vh] grid grid-cols-1 lg:grid-cols-12 border-b border-ink/5">
       <div className="lg:col-span-7 flex flex-col justify-center p-8 lg:p-20">
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand mb-8">
-          VCE Tutoring · Melbourne · Australia
-        </span>
         <h1 className="text-5xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-balance mb-10 max-w-[18ch]">
           Melbourne VCE Tutoring.{" "}
           <span className="italic text-brand">

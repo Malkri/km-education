@@ -12,10 +12,7 @@ export function Teachers() {
     <section className="py-24 lg:py-32 px-6 border-y border-ink/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand">
-            Who We Are
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4">What makes KM Education different.</h2>
+          <h2 className="text-4xl lg:text-5xl font-extralight">What makes KM Education different.</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
           <div className="aspect-[3/4] relative">
@@ -24,14 +21,11 @@ export function Teachers() {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-extralight">Krishav</h3>
-              <p className="text-brand text-[10px] uppercase tracking-[0.2em] font-mono mt-2">
-                Founder · KM Education
-              </p>
             </div>
             <div className="space-y-5 text-base font-light text-ink/70 leading-relaxed">
               <p>
-                Hi! I&apos;m Krishav, the founder of KM Education. At KM Education, we understand one
-                thing: most students don&apos;t struggle because they&apos;re lazy.
+                At KM Education, we understand one thing: most students don&apos;t struggle
+                because they&apos;re lazy.
               </p>
               <p>
                 They struggle because nobody has shown them exactly what examiners want. Every lesson
