@@ -35,7 +35,7 @@ export function Footer() {
     <footer className="bg-ink text-paper py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <div className="relative h-14 w-48 mb-4 invert">
+          <div className="relative h-28 w-96 -ml-2 mb-4 invert">
             <Image src="/km-education-logo.png" alt="KM Education" fill className="object-contain object-left" />
           </div>
         </div>
