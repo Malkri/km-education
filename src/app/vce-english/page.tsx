@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { SubjectPageTemplate, SubjectPageData } from "@/components/subject/SubjectPageTemplate";
+import { Collage } from "@/components/ui/Collage";
 
 const resourceImages = [
-  { src: "/vce-english/resource-oedipus.png", alt: "Oedipus the King content lesson resource" },
-  { src: "/vce-english/resource-voice-referendum.png", alt: "The Voice Referendum persuasive analysis resource" },
-  { src: "/vce-english/resource-regeneration.png", alt: "Regeneration content lesson resource" },
-  { src: "/vce-english/resource-holdovers.png", alt: "The Holdovers model point of analysis resource" },
+  { src: "/vce-english/resource-oedipus.png", alt: "Oedipus the King content lesson resource", width: 707, height: 612 },
+  { src: "/vce-english/resource-voice-referendum.png", alt: "The Voice Referendum persuasive analysis resource", width: 789, height: 716 },
+  { src: "/vce-english/resource-regeneration.png", alt: "Regeneration content lesson resource", width: 832, height: 642 },
+  { src: "/vce-english/resource-holdovers.png", alt: "The Holdovers model point of analysis resource", width: 747, height: 602 },
 ];
 
 export const metadata: Metadata = {
@@ -121,13 +121,7 @@ const data: SubjectPageData = {
           <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10">
             Here&apos;s a collage of some of our resources!
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resourceImages.map((img) => (
-              <div key={img.src} className="relative h-80 bg-paper border border-ink/10">
-                <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
-              </div>
-            ))}
-          </div>
+          <Collage images={resourceImages} />
         </div>
       </section>
     </>
