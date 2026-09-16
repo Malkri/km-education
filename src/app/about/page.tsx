@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { Results } from "@/components/sections/Results";
+import { Testimonials } from "@/components/sections/Testimonials";
+
+const proofImages = [
+  { src: "/about/atar-result.png", alt: "VTAC ATAR result — 99.95" },
+  { src: "/about/study-scores.png", alt: "VCE Data Service study scores — four Raw 50s" },
+  { src: "/about/the-age-feature.png", alt: "The Age feature on perfect VCE study scores" },
+  { src: "/about/premiers-award.jpg", alt: "Premier's VCE Award presentation" },
+];
 
 export const metadata: Metadata = {
   title: "Who We Are — KM Education",
@@ -14,12 +24,6 @@ const achievements = [
   { stat: "2", label: "Features in The Age & Herald Sun" },
 ];
 
-const different = [
-  "Clarity over content overload",
-  "High-level thinking over memorisation",
-  "Exam performance over passive learning",
-  "Deliberate practice over repetition",
-];
 
 export default function AboutPage() {
   return (
@@ -30,34 +34,34 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">Who We Are</span>
           <h1 className="text-4xl lg:text-5xl font-extralight leading-tight mt-4 text-balance">
-            Melbourne VCE tutoring built for top results.
+            We teach the part of VCE that nobody actually teaches.
           </h1>
           <p className="text-ink/60 font-light mt-8 text-lg leading-relaxed max-w-2xl">
-            Students don&apos;t fall short because they lack ability — they fall short because they&apos;re
-            never taught how to perform. We provide Melbourne VCE tutoring designed for students who
-            want more than average results, whether that&apos;s a 35+ or a Raw 50.
+            Every kid in a 3/4 class gets the same content. The ones who walk out with a 45+ know
+            something extra: how the exam is really marked, and how to hand an assessor exactly
+            what they&apos;re hunting for. That&apos;s the bit we teach.
           </p>
         </div>
       </section>
 
       <section className="py-24 lg:py-32 px-6 bg-ink text-paper">
         <div className="max-w-4xl mx-auto grid md:grid-cols-[1fr_auto] gap-16 items-start">
-          <div>
-            <h3 className="text-3xl font-extralight">Krishav</h3>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand mt-2 mb-8">
-              Founder, KM Education
+          <div className="border-l-2 border-paper/20 pl-8 space-y-6 text-paper/70 font-light leading-relaxed">
+            <p>Hi, I&apos;m Krishav.</p>
+            <p>
+              I finished Year 12 with three Premier&apos;s Awards and four Raw 50s. That&apos;s not the
+              useful part of the story though. The useful part is Year 11, when I was sitting on
+              70s in English and genuinely could not tell you why. I got &quot;go deeper&quot; written
+              on three essays in a row. Nobody ever explained what deeper meant.
             </p>
-            <p className="text-paper/70 font-light leading-relaxed mb-6">
-              Hi, I&apos;m Krishav, founder of KM Education. When I was in Year 12, I realised something
-              early: there was no shortage of tutoring in Melbourne, but there was a shortage of
-              clarity. Most programs overloaded students with content, relied on repetitive
-              practice, and lacked a clear system for achieving top results — and even strong
-              students were left guessing what actually separates a 40 from a Raw 50.
+            <p>
+              I worked it out the slow way: assessor reports, then pulling apart top-scoring essays
+              line by line until I could see what they were all quietly doing. Then I did the same
+              thing for Methods and Specialist.
             </p>
-            <p className="text-paper/70 font-light leading-relaxed">
-              KM Education was created to answer that question. The systems we teach aren&apos;t
-              theoretical: they come from results achieved at the highest level, and from
-              understanding how exams actually work.
+            <p>
+              KM Education is just that, taught properly. Not more worksheets. The stuff I had to
+              reverse-engineer on my own, handed over on day one, so nobody wastes a year guessing.
             </p>
           </div>
         </div>
@@ -65,7 +69,7 @@ export default function AboutPage() {
           {achievements.map((a) => (
             <div key={a.label}>
               <div className="text-4xl lg:text-5xl font-extralight text-brand">{a.stat}</div>
-              <div className="text-xs uppercase tracking-[0.2em] text-paper/50 font-mono mt-3">
+              <div className="text-sm uppercase tracking-[0.2em] text-paper/50 font-mono mt-3">
                 {a.label}
               </div>
             </div>
@@ -75,44 +79,39 @@ export default function AboutPage() {
 
       <section className="py-24 lg:py-32 px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">Our Philosophy</span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-8 text-balance">
+          <h2 className="text-4xl lg:text-5xl font-extralight mb-8 text-balance">
             Practice doesn&apos;t make perfect.
           </h2>
-          <p className="text-ink/60 font-light text-lg leading-relaxed mb-4">
-            Most tutoring teaches students to practise more. We teach students to practise
-            correctly — because practice doesn&apos;t make perfect, it makes permanent.
+          <p className="text-ink/60 font-light text-lg leading-relaxed mb-6">
+            Many tutoring centers rely on the belief that &quot;practice makes perfect,&quot; but we
+            know the truth:
+          </p>
+          <p className="italic text-brand text-xl text-center mb-6">&quot;Practice makes permanent.&quot;</p>
+          <p className="text-ink/60 font-light text-lg leading-relaxed mb-6">
+            And permanence requires <span className="font-semibold italic">quality</span>.
           </p>
           <p className="text-ink/60 font-light text-lg leading-relaxed">
-            At KM Education, students are trained to recognise patterns before they appear,
-            understand how exam questions are constructed, and apply concepts with precision
-            under time pressure. That&apos;s what builds real confidence: not repetition, but
-            certainty.
+            Whilst other tutoring services provide endless, repetitive resources, at KM Education
+            we&apos;re <span className="font-semibold italic">different</span>. Instead, we equip you
+            with the exact tools you need to reach your goal—whether it&apos;s a 35, 40, 45, or the
+            elusive 50. I&apos;ve been through every stage of VCE preparation, ultimately topping the
+            state and achieving <span className="italic">four perfect raw scores of 50</span>. I know
+            what it takes to reach each target efficiently,{" "}
+            <span className="font-semibold italic">without wasted effort or time</span>.
           </p>
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 px-6 bg-brand/5">
-        <div className="max-w-3xl mx-auto">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">What Makes Us Different</span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-10 text-balance">
-            We don&apos;t aim to be the biggest. We aim to be the most effective.
-          </h2>
-          <ul className="space-y-4">
-            {different.map((d) => (
-              <li key={d} className="flex items-start gap-4 text-base font-light">
-                <span className="size-6 rounded-full border border-brand flex items-center justify-center text-brand text-xs shrink-0 mt-0.5">
-                  ✓
-                </span>
-                {d}
-              </li>
-            ))}
-          </ul>
-          <p className="text-ink/60 font-light text-lg leading-relaxed mt-10">
-            Every lesson, resource and piece of feedback is designed with one goal: to move
-            students closer to top 1% performance. The students who succeed aren&apos;t the ones
-            who know the most — they&apos;re the ones who can execute when it matters.
-          </p>
+      <Results />
+      <Testimonials />
+
+      <section className="py-24 lg:py-32 px-6">
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {proofImages.map((img) => (
+            <div key={img.src} className="relative h-72 bg-ink/5 border border-ink/10">
+              <Image src={img.src} alt={img.alt} fill className="object-contain" />
+            </div>
+          ))}
         </div>
       </section>
 

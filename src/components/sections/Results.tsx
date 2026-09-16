@@ -56,9 +56,11 @@ export function Results({ showAllDefault = false }: { showAllDefault?: boolean }
             </tbody>
           </table>
         </div>
-        <p className="text-paper/40 text-base font-light mt-6 font-mono">
-          …and many more Raw 40+ study scores.
-        </p>
+        {showAll && (
+          <p className="text-paper/40 text-base font-light mt-6 font-mono">
+            …and many more Raw 40+ study scores.
+          </p>
+        )}
         {!showAllDefault && results.length > INITIAL_COUNT && (
           <button
             onClick={() => setShowAll((v) => !v)}

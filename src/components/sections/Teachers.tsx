@@ -19,9 +19,6 @@ export function Teachers() {
             <Placeholder label="Krishav — Founder, KM Education" />
           </div>
           <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl font-extralight">Krishav</h3>
-            </div>
             <div className="space-y-5 text-base font-light text-ink/70 leading-relaxed">
               <p>
                 At KM Education, we understand one thing: most students don&apos;t struggle

@@ -1,10 +1,20 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
+
+const ENGLISH_3_4 = "VCE English Units 3 and 4";
 
 export function BookingForm() {
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+  };
+
+  const toggleSubject = (subject: string) => {
+    setSelectedSubjects((prev) =>
+      prev.includes(subject) ? prev.filter((s) => s !== subject) : [...prev, subject]
+    );
   };
 
   const reassurance = [
@@ -69,15 +79,33 @@ export function BookingForm() {
           </div>
           <div>
             <label className={labelClass}>Subject(s)</label>
-            <div className="grid grid-cols-1 gap-3 pt-2">
+            <div className="grid grid-cols-2 gap-3 pt-2">
               {subjectOptions.map((s) => (
                 <label key={s} className="flex items-center gap-3 text-sm font-light cursor-pointer">
-                  <input type="checkbox" name="subjects" value={s} className="accent-brand size-4" />
+                  <input
+                    type="checkbox"
+                    name="subjects"
+                    value={s}
+                    checked={selectedSubjects.includes(s)}
+                    onChange={() => toggleSubject(s)}
+                    className="accent-brand size-4"
+                  />
                   {s}
                 </label>
               ))}
             </div>
           </div>
+          {selectedSubjects.includes(ENGLISH_3_4) && (
+            <div>
+              <label className="text-sm font-light text-ink/70 block mb-2">
+                What texts/framework are you studying, and if possible give the order of
+                texts/frameworks studied (i.e. 1. Oedipus the King 2. Protest 3. Memory Police). If
+                you don&apos;t know the order yet or know the texts yet — you can just leave this
+                blank 😊
+              </label>
+              <textarea name="englishTexts" rows={3} className={inputClass + " resize-none"} />
+            </div>
+          )}
           <button
             type="submit"
             className="w-full bg-brand text-paper py-4 text-[11px] uppercase tracking-[0.2em] font-light hover:bg-ink transition-colors mt-4"
