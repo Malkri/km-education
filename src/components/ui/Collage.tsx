@@ -11,7 +11,7 @@ export function Collage({ images }: { images: CollageImage[] }) {
   if (images.length === 0) return null;
 
   return (
-    <div className="w-full max-w-2xl columns-2 gap-1.5 [column-fill:balance]">
+    <div className="w-full max-w-2xl mx-auto columns-2 gap-1.5 [column-fill:balance]">
       {images.map((img) => (
         <div key={img.src} className="mb-1.5 break-inside-avoid shadow-sm bg-paper">
           <Image
