@@ -68,7 +68,7 @@ const data: SubjectPageData = {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {resourceImages.map((img) => (
                   <div key={img.src} className="relative h-80 bg-paper border border-ink/10">
-                    <Image src={img.src} alt={img.alt} fill className="object-contain" />
+                    <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
                   </div>
                 ))}
               </div>

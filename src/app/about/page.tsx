@@ -109,7 +109,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {proofImages.map((img) => (
             <div key={img.src} className="relative h-72 bg-ink/5 border border-ink/10">
-              <Image src={img.src} alt={img.alt} fill className="object-contain" />
+              <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
             </div>
           ))}
         </div>
