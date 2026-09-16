@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { Results } from "@/components/sections/Results";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { SubjectPageTemplate, SubjectPageData } from "@/components/subject/SubjectPageTemplate";
+
+const resourceImages: { src: string; alt: string }[] = [];
 
 export const metadata: Metadata = {
   title: "VCE Methods Tutoring Melbourne — KM Education",
@@ -20,25 +25,57 @@ const data: SubjectPageData = {
       body: "Our Methods course was designed by a perfect Raw 50 and Premier's Award scorer, with a heavy focus on deep conceptual understanding, advanced problem-solving, efficient CAS usage, SAC optimisation and avoiding the mistakes that cost students marks. Our philosophy: nothing on exam day should surprise you.",
     },
     {
-      title: "Custom UDF programs",
-      body: "Students get access to our own custom UDF systems, built to give a genuine edge in SACs and exams: spotting high-yield question types, solving problems faster, and recognising the patterns VCAA repeats year after year.",
+      title: "Practice SACs & resources",
+      body: "Practice SACs, exam-style questions, weekly tests, worked solutions, challenge problems and full exam walkthroughs — a resource bank built to prepare students for both school assessments and the real VCAA exam.",
     },
     {
-      title: "Practice SACs & resources",
-      body: "Practice SACs, exam-style questions, topic tests, worked solutions, challenge problems and full exam walkthroughs — a resource bank built to prepare students for both school assessments and the real VCAA exam.",
+      title: "Weekly practice tests",
+      body: "Unlike other tutoring centers, we give regular feedback to our students. Knowing content versus actually being able to perform on the day are completely different skillsets, at KM Education we train both.",
     },
     {
       title: "Support beyond the lesson",
-      body: "Every student gets ongoing help outside class: homework questions, SAC revision, CAS troubleshooting, study planning and exam preparation. No one is left stuck studying Methods alone.",
+      body: "We don't just stop at our two weekly lessons. We make sure students receive 24/7 support from us via messenger — so students have their questions answered, any time.",
     },
   ],
-  idealFor: [
-    "Want to lift their SAC performance",
-    "Are aiming for a 40+ or Raw 50 study score",
-    "Struggle with harder application questions",
-    "Want a stronger, more structured exam strategy",
-    "Feel school explanations aren't quite enough",
-  ],
+  hideIdealFor: true,
+  idealFor: [],
+  extra: (
+    <>
+      <section className="py-24 lg:py-32 px-6 bg-brand/5">
+        <div className="max-w-5xl mx-auto">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
+            Our Resources
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-8 text-balance">
+            Made in-house, every week.
+          </h2>
+          <p className="text-ink/60 font-light text-lg leading-relaxed max-w-2xl">
+            We make our own resources, with booklets for our weekly Content Lessons and
+            Application (Test) Lessons. Beyond this, students receive support via our practice
+            materials — weekly homework questions, practice SACs, live exam walkthroughs and
+            unlimited support outside of class.
+          </p>
+          {resourceImages.length > 0 && (
+            <>
+              <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10">
+                Here&apos;s a collage of some of our resources!
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {resourceImages.map((img) => (
+                  <div key={img.src} className="relative h-80 bg-paper border border-ink/10">
+                    <Image src={img.src} alt={img.alt} fill className="object-contain" />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      <Results />
+      <Testimonials />
+    </>
+  ),
   faqs: [
     {
       q: "What makes KM Education different from other Methods tutoring?",
