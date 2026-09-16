@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Results } from "@/components/sections/Results";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Collage } from "@/components/ui/Collage";
 
 const proofImages = [
-  { src: "/about/atar-result.png", alt: "VTAC ATAR result — 99.95" },
-  { src: "/about/study-scores.png", alt: "VCE Data Service study scores — four Raw 50s" },
-  { src: "/about/the-age-feature.png", alt: "The Age feature on perfect VCE study scores" },
-  { src: "/about/premiers-award.jpg", alt: "Premier's VCE Award presentation" },
+  { src: "/about/atar-result.png", alt: "VTAC ATAR result — 99.95", width: 1486, height: 771 },
+  { src: "/about/study-scores.png", alt: "VCE Data Service study scores — four Raw 50s", width: 755, height: 441 },
+  { src: "/about/the-age-feature.png", alt: "The Age feature on perfect VCE study scores", width: 419, height: 353 },
+  { src: "/about/premiers-award.jpg", alt: "Premier's VCE Award presentation", width: 1500, height: 1200 },
 ];
 
 export const metadata: Metadata = {
@@ -106,12 +106,8 @@ export default function AboutPage() {
       <Testimonials />
 
       <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {proofImages.map((img) => (
-            <div key={img.src} className="relative h-72 bg-ink/5 border border-ink/10">
-              <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
-            </div>
-          ))}
+        <div className="max-w-2xl mx-auto flex justify-center">
+          <Collage images={proofImages} />
         </div>
       </section>
 
