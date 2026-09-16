@@ -113,12 +113,12 @@ const data: SubjectPageData = {
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-8 text-balance">
             Made in-house, for every text.
           </h2>
-          <p className="text-ink/60 font-light text-lg leading-relaxed">
+          <p className="text-ink/60 font-light text-lg leading-relaxed text-left">
             We make our own resources, with weekly booklets for EVERY single text. For each text
             you&apos;ll receive sample essays and model points of analysis, all walked through live
             and explained simply by our expert tutors.
           </p>
-          <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10">
+          <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10 text-left">
             Here&apos;s a collage of some of our resources!
           </p>
           <Collage images={resourceImages} />
