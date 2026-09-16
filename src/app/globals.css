@@ -77,6 +77,15 @@
   animation: marquee 40s linear infinite;
 }
 
+@keyframes marquee-ltr {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@utility animate-marquee-ltr {
+  animation: marquee-ltr 30s linear infinite;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

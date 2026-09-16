@@ -3,7 +3,7 @@ import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Results } from "@/components/sections/Results";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Collage } from "@/components/ui/Collage";
+import { ImageMarquee } from "@/components/ui/ImageMarquee";
 
 const proofImages = [
   { src: "/about/atar-result.png", alt: "VTAC ATAR result — 99.95", width: 1486, height: 771 },
@@ -78,8 +78,8 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-2xl mx-auto flex justify-center">
-          <Collage images={proofImages} />
+        <div className="max-w-7xl mx-auto">
+          <ImageMarquee images={proofImages} />
         </div>
       </section>
 
