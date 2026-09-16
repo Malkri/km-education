@@ -106,14 +106,14 @@ const data: SubjectPageData = {
       </section>
 
       <section className="py-24 lg:py-32 px-6 bg-brand/5">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-2xl mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
             Our Resources
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-8 text-balance">
             Made in-house, for every text.
           </h2>
-          <p className="text-ink/60 font-light text-lg leading-relaxed max-w-2xl">
+          <p className="text-ink/60 font-light text-lg leading-relaxed">
             We make our own resources, with weekly booklets for EVERY single text. For each text
             you&apos;ll receive sample essays and model points of analysis, all walked through live
             and explained simply by our expert tutors.
