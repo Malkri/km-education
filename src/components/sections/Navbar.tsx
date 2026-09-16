@@ -13,6 +13,7 @@ const subjects = [
 const links = [
   { href: "/about", label: "About Us" },
   { href: "/results", label: "Our Results" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export function Navbar() {

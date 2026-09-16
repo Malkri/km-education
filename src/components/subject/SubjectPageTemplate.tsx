@@ -23,10 +23,11 @@ export type SubjectPageData = {
   idealFor: string[];
   faqs: SubjectFaq[];
   extra?: React.ReactNode;
+  hideIdealFor?: boolean;
 };
 
 export function SubjectPageTemplate({ data }: { data: SubjectPageData }) {
-  const { eyebrow, title, intro, pillars, idealFor, faqs, extra } = data;
+  const { eyebrow, title, intro, pillars, idealFor, faqs, extra, hideIdealFor } = data;
 
   return (
     <>
@@ -57,26 +58,28 @@ export function SubjectPageTemplate({ data }: { data: SubjectPageData }) {
 
       {extra}
 
-      <section className="py-24 lg:py-32 px-6 bg-brand/5">
-        <div className="max-w-3xl mx-auto">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
-            Who This Is For
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-10">
-            Built for students who want more.
-          </h2>
-          <ul className="space-y-4">
-            {idealFor.map((r) => (
-              <li key={r} className="flex items-start gap-4 text-base font-light">
-                <span className="size-6 rounded-full border border-brand flex items-center justify-center text-brand text-xs shrink-0 mt-0.5">
-                  ✓
-                </span>
-                {r}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {!hideIdealFor && (
+        <section className="py-24 lg:py-32 px-6 bg-brand/5">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
+              Who This Is For
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-10">
+              Built for students who want more.
+            </h2>
+            <ul className="space-y-4">
+              {idealFor.map((r) => (
+                <li key={r} className="flex items-start gap-4 text-base font-light">
+                  <span className="size-6 rounded-full border border-brand flex items-center justify-center text-brand text-xs shrink-0 mt-0.5">
+                    ✓
+                  </span>
+                  {r}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <section className="py-24 lg:py-32 px-6">
         <div className="max-w-3xl mx-auto">
