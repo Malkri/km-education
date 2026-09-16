@@ -78,6 +78,12 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 lg:py-32 px-6">
+        <div className="max-w-2xl mx-auto flex justify-center">
+          <Collage images={proofImages} />
+        </div>
+      </section>
+
+      <section className="py-24 lg:py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-extralight mb-8 text-balance">
             Practice doesn&apos;t make perfect.
@@ -104,12 +110,6 @@ export default function AboutPage() {
 
       <Results />
       <Testimonials />
-
-      <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-2xl mx-auto flex justify-center">
-          <Collage images={proofImages} />
-        </div>
-      </section>
 
       <section className="py-24 lg:py-32 px-6 bg-ink text-paper text-center">
         <div className="max-w-2xl mx-auto">
