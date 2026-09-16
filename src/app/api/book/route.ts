@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 const TO_EMAIL = "welcome@km-education.com";
 
@@ -13,9 +13,10 @@ function escapeHtml(value: string) {
 }
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is not configured");
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+  if (!gmailUser || !gmailAppPassword) {
+    console.error("GMAIL_USER / GMAIL_APP_PASSWORD is not configured");
     return NextResponse.json({ error: "Booking is temporarily unavailable." }, { status: 500 });
   }
 
@@ -45,21 +46,22 @@ export async function POST(req: NextRequest) {
     ${englishTexts ? `<p><strong>VCE English texts/framework:</strong> ${escapeHtml(englishTexts).replace(/\n/g, "<br>")}</p>` : ""}
   `;
 
-  const resend = new Resend(apiKey);
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: gmailUser,
+      pass: gmailAppPassword,
+    },
+  });
 
   try {
-    const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "KM Education <onboarding@resend.dev>",
+    await transporter.sendMail({
+      from: `KM Education <${gmailUser}>`,
       to: TO_EMAIL,
       replyTo: email,
       subject: `New Free Trial Request — ${studentName}`,
       html,
     });
-
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json({ error: "Failed to send booking request." }, { status: 500 });
-    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
