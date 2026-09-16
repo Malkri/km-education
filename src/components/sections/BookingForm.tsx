@@ -4,11 +4,40 @@ import { FormEvent, useState } from "react";
 
 const ENGLISH_3_4 = "VCE English Units 3 and 4";
 
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
+
 export function BookingForm() {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [status, setStatus] = useState<SubmitStatus>("idle");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/book", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          studentName: data.get("studentName"),
+          parentName: data.get("parentName"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          subjects: selectedSubjects,
+          englishTexts: data.get("englishTexts") || undefined,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      form.reset();
+      setSelectedSubjects([]);
+    } catch {
+      setStatus("error");
+    }
   };
 
   const toggleSubject = (subject: string) => {
@@ -62,20 +91,20 @@ export function BookingForm() {
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label className={labelClass}>Student Name</label>
-              <input type="text" required className={inputClass} />
+              <input type="text" name="studentName" required className={inputClass} />
             </div>
             <div>
               <label className={labelClass}>Parent Name</label>
-              <input type="text" required className={inputClass} />
+              <input type="text" name="parentName" required className={inputClass} />
             </div>
           </div>
           <div>
             <label className={labelClass}>Email</label>
-            <input type="email" required className={inputClass} />
+            <input type="email" name="email" required className={inputClass} />
           </div>
           <div>
             <label className={labelClass}>Phone</label>
-            <input type="tel" required className={inputClass} />
+            <input type="tel" name="phone" required className={inputClass} />
           </div>
           <div>
             <label className={labelClass}>Subject(s)</label>
@@ -108,10 +137,21 @@ export function BookingForm() {
           )}
           <button
             type="submit"
-            className="w-full bg-brand text-paper py-4 text-[11px] uppercase tracking-[0.2em] font-light hover:bg-ink transition-colors mt-4"
+            disabled={status === "submitting"}
+            className="w-full bg-brand text-paper py-4 text-[11px] uppercase tracking-[0.2em] font-light hover:bg-ink transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Request My Free Trial
+            {status === "submitting" ? "Sending…" : "Request My Free Trial"}
           </button>
+          {status === "success" && (
+            <p className="text-sm font-light text-brand">
+              Thanks! We&apos;ve received your request and will be in touch shortly.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm font-light text-red-600">
+              Something went wrong sending your request. Please try again or email us directly.
+            </p>
+          )}
         </form>
       </div>
     </section>
