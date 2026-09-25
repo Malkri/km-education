@@ -19,6 +19,34 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
+    <>
+    <div className="relative bg-ink text-paper overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--brand)_0%,transparent_70%)] opacity-40"
+      />
+      <div className="relative max-w-7xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 text-center">
+        <p className="text-xs sm:text-[13px] font-light tracking-wide leading-relaxed">
+          <span className="inline-flex items-center gap-2 mr-3 align-middle">
+            <span className="relative flex size-1.5">
+              <span className="absolute inline-flex size-full rounded-full bg-paper/70 animate-ping" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-paper" />
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-paper/70">
+              2027 Intake
+            </span>
+          </span>
+          <span className="font-normal">Express Interests for 2027 Trial Classes Now Open.</span>{" "}
+          <span className="text-paper/70">English 3/4 — ALL TEXTS are available.</span>
+        </p>
+        <a
+          href="/#book"
+          className="shrink-0 border border-paper/40 px-5 py-1.5 text-[10px] uppercase tracking-[0.2em] font-light hover:bg-paper hover:text-ink transition-colors"
+        >
+          Book Now
+        </a>
+      </div>
+    </div>
     <nav className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md border-b border-ink/5">
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
         <a href="/" className="block relative h-24 w-72 shrink-0">
@@ -113,5 +141,6 @@ export function Navbar() {
         </div>
       )}
     </nav>
+    </>
   );
 }
