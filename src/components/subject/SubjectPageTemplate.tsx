@@ -84,8 +84,7 @@ export function SubjectPageTemplate({ data }: { data: SubjectPageData }) {
       <section className="py-24 lg:py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">FAQ</span>
-            <h2 className="text-4xl lg:text-5xl font-extralight mt-4">Common questions.</h2>
+            <h2 className="text-4xl lg:text-5xl font-extralight">Frequently Asked Questions.</h2>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (

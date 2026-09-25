@@ -32,8 +32,7 @@ export default function AboutPage() {
 
       <section className="py-24 lg:py-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">Who We Are</span>
-          <h1 className="text-4xl lg:text-5xl font-extralight leading-tight mt-4 text-balance">
+          <h1 className="text-4xl lg:text-5xl font-extralight leading-tight text-balance">
             We teach the part of VCE that nobody actually teaches.
           </h1>
           <p className="text-ink/60 font-light mt-8 text-lg leading-relaxed max-w-2xl">

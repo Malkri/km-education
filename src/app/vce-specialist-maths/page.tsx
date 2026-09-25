@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Results } from "@/components/sections/Results";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SubjectPageTemplate, SubjectPageData } from "@/components/subject/SubjectPageTemplate";
+import { Collage } from "@/components/ui/Collage";
 
 const resourceImages = [
-  { src: "/vce-specialist-maths/resource-predicted-questions.png", alt: "Predicted hardest questions in the 2025 VCAA exams" },
-  { src: "/vce-specialist-maths/resource-support.png", alt: "Unlimited support outside of class from two tutors" },
-  { src: "/vce-specialist-maths/resource-notes.png", alt: "Weekly detailed notes and homework with handwritten solutions" },
-  { src: "/vce-specialist-maths/resource-sacs-udfs.png", alt: "Practice SACs, exam walkthroughs and CAS programs" },
+  { src: "/vce-specialist-maths/resource-predicted-questions.png", alt: "Predicted hardest questions in the 2025 VCAA exams", width: 1280, height: 720 },
+  { src: "/vce-specialist-maths/resource-support.png", alt: "Unlimited support outside of class from two tutors", width: 1280, height: 720 },
+  { src: "/vce-specialist-maths/resource-notes.png", alt: "Weekly detailed notes and homework with handwritten solutions", width: 2667, height: 1500 },
+  { src: "/vce-specialist-maths/resource-sacs-udfs.png", alt: "Practice SACs, exam walkthroughs and CAS programs", width: 2667, height: 1500 },
 ];
 
 export const metadata: Metadata = {
@@ -47,33 +47,23 @@ const data: SubjectPageData = {
   extra: (
     <>
       <section className="py-24 lg:py-32 px-6 bg-brand/5">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-2xl mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
             Our Resources
           </span>
           <h2 className="text-4xl lg:text-5xl font-extralight mt-4 mb-8 text-balance">
             Made in-house, every week.
           </h2>
-          <p className="text-ink/60 font-light text-lg leading-relaxed max-w-2xl">
+          <p className="text-ink/60 font-light text-lg leading-relaxed text-left">
             We make our own resources, with booklets for our weekly Content Lessons and
             Application (Test) Lessons. Beyond this, students receive support via our practice
             materials — weekly homework questions, practice SACs, live exam walkthroughs and
             unlimited support outside of class.
           </p>
-          {resourceImages.length > 0 && (
-            <>
-              <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10">
-                Here&apos;s a collage of some of our resources!
-              </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {resourceImages.map((img) => (
-                  <div key={img.src} className="relative h-80 bg-paper border border-ink/10">
-                    <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+          <p className="text-ink/60 font-light text-lg leading-relaxed mt-2 mb-10 text-left">
+            Here&apos;s a collage of some of our resources!
+          </p>
+          <Collage images={resourceImages} />
         </div>
       </section>
 
