@@ -4,10 +4,10 @@ export function Hero() {
   return (
     <header id="top" className="min-h-[88vh] grid grid-cols-1 lg:grid-cols-12 border-b border-ink/5">
       <div className="lg:col-span-7 flex flex-col justify-center p-8 lg:p-20">
-        <h1 className="text-5xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-balance mb-10 max-w-[18ch]">
+        <h1 className="text-4xl lg:text-6xl font-extralight leading-[1.05] tracking-tight text-balance mb-10 max-w-[18ch]">
           Melbourne VCE Tutoring.{" "}
           <span className="italic text-brand">
-            Helping students study smarter, build confidence, and maximise their ATAR.
+            Helping students maximise their ATAR, and enter their dream course.
           </span>
         </h1>
         <p className="text-base lg:text-lg font-light text-ink/60 max-w-xl mb-10">
@@ -32,8 +32,8 @@ export function Hero() {
       <div className="lg:col-span-5 flex items-center justify-center min-h-[400px] lg:min-h-0 p-8">
         <div className="relative w-full h-full">
           <Image
-            src="/Krishav's Premier's Award Photo.jpg"
-            alt="Student achievement"
+            src="/hero-results.jpg"
+            alt="99.95 ATAR — 3x Premier's Awards, 4x Raw 50s"
             fill
             className="object-contain"
             priority

@@ -1,4 +1,4 @@
-import { Placeholder } from "./Placeholder";
+import Image from "next/image";
 
 const achievements = [
   "99.95 ATAR and Dux of MHS",
@@ -15,8 +15,13 @@ export function Teachers() {
           <h2 className="text-4xl lg:text-5xl font-extralight">What makes KM Education different.</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
-          <div className="aspect-[3/4] relative">
-            <Placeholder label="Krishav — Founder, KM Education" />
+          <div className="aspect-[5/4] relative border border-ink/5">
+            <Image
+              src="/Krishav's Premier's Award Photo.jpg"
+              alt="Krishav Malhotra receiving the Premier's VCE Award — Founder, KM Education"
+              fill
+              className="object-cover"
+            />
           </div>
           <div className="space-y-8">
             <div className="space-y-5 text-base font-light text-ink/70 leading-relaxed">
