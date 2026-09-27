@@ -2,19 +2,16 @@ const programs = [
   {
     title: "VCE Methods",
     desc: "Master problem-solving, exam techniques and the CAS to dominate SACs and VCAA exams.",
-    featured: true,
     href: "/vce-methods",
   },
   {
     title: "VCE English",
     desc: "Develop unique arguments, sophisticated analysis, and exam-ready essays designed to score 40+ with ease. Every 2026 text covered.",
-    featured: false,
     href: "/vce-english",
   },
   {
     title: "VCE Specialist Maths",
     desc: "Understand tricky concepts with simple explanations, live walkthroughs, unlimited support out-of-class, CAS support for SACs and exams.",
-    featured: false,
     href: "/vce-specialist-maths",
   },
 ];
@@ -32,12 +29,7 @@ export function Programs() {
           {programs.map((p) => (
             <div
               key={p.title}
-              className={
-                "p-8 flex flex-col h-full border " +
-                (p.featured
-                  ? "border-brand/40 bg-brand/10"
-                  : "border-paper/10 hover:border-paper/30 transition-colors")
-              }
+              className="p-8 flex flex-col h-full border border-paper/10 hover:border-paper/30 transition-colors"
             >
               <h4 className="text-xl font-light mb-4">{p.title}</h4>
               <p className="text-sm text-paper/60 font-light flex-grow mb-8">{p.desc}</p>
