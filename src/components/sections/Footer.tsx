@@ -3,6 +3,7 @@ import Image from "next/image";
 const socialIcons = [
   {
     label: "Instagram",
+    href: "https://www.instagram.com/km.education_/",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="size-4">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -13,6 +14,7 @@ const socialIcons = [
   },
   {
     label: "Facebook",
+    href: "https://www.facebook.com/people/KM-Education/61566934810760/",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="size-4">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
@@ -21,6 +23,7 @@ const socialIcons = [
   },
   {
     label: "YouTube",
+    href: "https://www.youtube.com/@km-educ",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="size-4">
         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
@@ -65,7 +68,14 @@ export function Footer() {
           </h5>
           <div className="flex gap-3 mb-8">
             {socialIcons.map((icon) => (
-              <a key={icon.label} href="#" aria-label={icon.label} className="size-9 rounded-full border border-paper/15 flex items-center justify-center hover:bg-brand hover:border-brand transition-colors">
+              <a
+                key={icon.label}
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={icon.label}
+                className="size-9 rounded-full border border-paper/15 flex items-center justify-center hover:bg-brand hover:border-brand transition-colors"
+              >
                 {icon.svg}
               </a>
             ))}
