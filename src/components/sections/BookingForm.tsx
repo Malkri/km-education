@@ -57,6 +57,7 @@ export function BookingForm() {
     "VCE Specialist Math Units 3 and 4",
     "VCE English Units 1 and 2",
     "VCE Methods Units 1 and 2",
+    "VCE Specialist Math Units 1 and 2",
   ];
 
   const inputClass =
